@@ -27,6 +27,7 @@ namespace ProyectoFederacion
             double tiempoMedico = 0;
             double tiempoNormal = 0;
             double tiempoMarcaje = 0;
+            double tiempoEntreRounds = 0;
             int rounds = 3;
             int diferenciaPuntos = (int)spinDiferenciaMaxima.Value;
             int amonestaciones = (int)spinAmonestaciones.Value;
@@ -37,6 +38,13 @@ namespace ProyectoFederacion
             double tMedicoMinutos = (lstTiempoMedico[0].Equals("")) ? 0 : Convert.ToDouble(lstTiempoMedico[0]);
             double tMedicoSegundos = (lstTiempoMedico[1].Equals("")) ? 0 : Convert.ToDouble(lstTiempoMedico[1]);
             tiempoMedico = tMedicoMinutos * 60 + tMedicoSegundos;
+
+            string tEntreRounds = tmpPausaRounds.Text;
+            tEntreRounds = tEntreRounds.Replace(" ", "");
+            string[] lstTiempoEntreRounds = tEntreRounds.Split(':');
+            double tEntreRoundsMinutos = (lstTiempoEntreRounds[0].Equals("")) ? 0 : Convert.ToDouble(lstTiempoEntreRounds[0]);
+            double tEntreRoundsSegundos = (lstTiempoEntreRounds[1].Equals("")) ? 0 : Convert.ToDouble(lstTiempoEntreRounds[1]);
+            tiempoEntreRounds = tEntreRoundsMinutos * 60 + tEntreRoundsSegundos;
 
             string tNormal = txtTiempoCombate.Text;
             tNormal = tNormal.Replace(" ", "");
@@ -56,7 +64,7 @@ namespace ProyectoFederacion
             if (radioDosRounds.Checked == true)
                 rounds = 2;
 
-            Tiempo motorTiempo = new Tiempo(tiempoNormal, tiempoMedico, rounds);
+            Tiempo motorTiempo = new Tiempo(tiempoNormal, tiempoMedico, rounds, tiempoEntreRounds);
             Punteo motorPuntos = new Punteo(diferenciaPuntos, amonestaciones, tiempoMarcaje);
 
             Tablero t = new Tablero(motorTiempo, motorPuntos);
@@ -86,5 +94,6 @@ namespace ProyectoFederacion
             if (e.KeyCode == Keys.Escape)
                 this.Close();
         }
+
     }
 }

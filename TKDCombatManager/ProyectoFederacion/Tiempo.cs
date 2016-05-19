@@ -7,30 +7,38 @@ namespace ProyectoFederacion
 {
     public class Tiempo
     {
+        //variables que el usuario define: la duracion del tiempo medico, la duracion del round y la cantidad de rounds
         private double duracionRound;
         private double tiempoPausa;
+        private double tiempoEntreRounds;
         private int cantidadDeRounds = 3;
 
+        //variables de control: son las que se actualizan cada segundo: llevan la cuenta del tiempo transcurrido y el round actual
         private int numeroRoundActual = 0;
         private double tiempoActual;
         private double tiempoActualTiempoMedico;
+        private double tiempoActualEntreRounds;
         
+        //banderas de estado del reloj.
         private bool roundDesempate = false;
         private bool pausado = false;
         private bool estadoDetenido = false;
         private bool estadoTerminado = false;
         private bool banderaTiempoMedicoDetenido = false;
+        private bool estadoEntreRounds = false;
 
         public Tiempo()
         { }
 
-        public Tiempo(double round, double pausa, int cantidadRounds)
+        public Tiempo(double round, double pausa, int cantidadRounds, double entreRounds)
         {
             this.duracionRound = round;
             this.tiempoPausa = pausa;
             this.cantidadDeRounds = cantidadRounds;
             this.tiempoActual = round;
             this.tiempoActualTiempoMedico = 0;
+            this.tiempoActualEntreRounds = 0;
+            this.tiempoEntreRounds = entreRounds;
         }
 
         public void reset()
@@ -38,10 +46,12 @@ namespace ProyectoFederacion
             numeroRoundActual = 0;
             this.tiempoActual = duracionRound;
             this.tiempoActualTiempoMedico = 0;
+            this.tiempoActualEntreRounds = tiempoEntreRounds;
             roundDesempate = false;
             pausado = false;
             estadoDetenido = false;
             estadoTerminado = false;
+            estadoEntreRounds = false;
         }
         public double actual
         {
@@ -79,10 +89,7 @@ namespace ProyectoFederacion
         {
             get { return (tiempoActual == 0); }
         }
-        public bool tiempoMedicoTerminado
-        {
-            get { return (tiempoActualTiempoMedico == 0); }
-        }
+       
         public bool enPausa
         {
             get { return pausado; }
@@ -91,43 +98,61 @@ namespace ProyectoFederacion
         {
             get { return estadoDetenido; }
         }
+
+        public bool enDescanso
+        {
+            get { return estadoEntreRounds; }
+        }
+
         public bool reiniciarDeTiempoMedico()
         {
             pausado = false;
             banderaTiempoMedicoDetenido = false;
             return true;
         }
+        
         public void detenerTiempoMedico()
         {
             banderaTiempoMedicoDetenido = true;
-            //tiempoActualTiempoMedico = tiempoPausa;
         }
+
+        public void iniciarDescanso()
+        {
+            estadoEntreRounds = true;
+        }
+
+        public void finalizarDescanso()
+        {
+            estadoEntreRounds = false;
+        }
+        
         public void detener()
         {
             estadoDetenido = true;
-            //if (pausado == true)
-            //    tiempoActualTiempoMedico = 0;
-            //else
-            //    tiempoActual = 0;
-            //iniciado = false;
         }
+        
         public bool reiniciar()
         {
             estadoDetenido = false;
             return true;
         }
+        
         public void terminarCombate()
         {
-            //numeroRoundActual = cantidadDeRounds;
             //pausado = false; //si estaba en pausa, terminar la pausa e indicar el fin del combate
             estadoTerminado = true;
         }
+        
         public void pausar()
         {
             banderaTiempoMedicoDetenido = false;
             pausado = true;
             tiempoActualTiempoMedico = 0;
         }
+
+        /// <summary>
+        /// Suma tiempo al tiempo actual de round o de pausa entre rounds. Si es tiempo medico, se quita el tiempo.
+        /// </summary>
         public void sumarTiempo()
         {
             if (pausado == true)
@@ -135,12 +160,25 @@ namespace ProyectoFederacion
                 if (tiempoActualTiempoMedico > 0)
                     tiempoActualTiempoMedico--;
             }
-            else
+            else  //si el reloj no está en tiempo médico, adelantar el reloj para el descanso entre rounds o el tiempo del round
             {
-                if (tiempoActual < duracionRound)
-                    tiempoActual++;
+                if (estadoEntreRounds == true)
+                {
+                    if (tiempoActualEntreRounds < tiempoEntreRounds)
+                        tiempoActualEntreRounds++;
+                }
+                else
+                {
+                    if (tiempoActual < duracionRound)
+                        tiempoActual++;
+                }
+                
             }
         }
+
+        /// <summary>
+        /// Se resta tiempo a cualquiera de los estados: si es round o pausa entre rounds, se adelanta el reloj. Si es tiempo médico, se atrasa el reloj
+        /// </summary>
         public void quitarTiempo()
         {
             if (pausado == true)
@@ -150,17 +188,28 @@ namespace ProyectoFederacion
             }
             else
             {
-                if (tiempoActual > 0)
-                    tiempoActual--;
+                if (estadoEntreRounds == true)
+                {
+                    if (tiempoActualEntreRounds > 0)
+                        tiempoActualEntreRounds--;
+                }
+                else
+                {
+                    if (tiempoActual > 0)
+                        tiempoActual--;
+                }
             }
         }
+        
         public bool iniciar()
         {
             bool bandera = true;
             pausado = false;
             estadoTerminado = false;
             estadoDetenido = false;
+            estadoEntreRounds = false;
             tiempoActual = duracionRound;
+            tiempoActualEntreRounds = tiempoEntreRounds;
             if (numeroRoundActual < cantidadDeRounds)
             {
                 numeroRoundActual++;
@@ -172,14 +221,18 @@ namespace ProyectoFederacion
             }
             return bandera;
         }
+        
         public void iniciarMuerteSubita()
         {
             pausado = false;
             estadoTerminado = false;
             estadoDetenido = false;
             roundDesempate = true;
+            estadoEntreRounds = false;
             tiempoActual = duracionRound;
+            tiempoActualEntreRounds = tiempoEntreRounds;
         }
+        
         /// <summary>
         /// Corriendo el reloj
         /// </summary>
@@ -197,16 +250,32 @@ namespace ProyectoFederacion
                 {
                     if ((roundDesempate == false) && (pausado == false))
                     {
-                        //si es tiempo normal
-                        if (tiempoActual > 0)
+                        if (estadoEntreRounds == true)
                         {
-                            tiempoActual--;
+                            //si es tiempo de descanso entre rounds.
+                            if (tiempoActualEntreRounds > 0)
+                            {
+                                tiempoActualEntreRounds--;
+                            }
+                            else
+                            {
+                                //terminó el tiempo de descanso entre rounds.
+                                bandera = false;
+                            }
                         }
                         else
                         {
-                            if (cantidadDeRounds == numeroRoundActual) //verificar si ya se cumplieron todos los rounds
-                                estadoTerminado = true;
-                            bandera = false;
+                            //si es tiempo normal
+                            if (tiempoActual > 0)
+                            {
+                                tiempoActual--;
+                            }
+                            else
+                            {
+                                if (cantidadDeRounds == numeroRoundActual) //verificar si ya se cumplieron todos los rounds
+                                    estadoTerminado = true;
+                                bandera = false;
+                            }
                         }
                     }
                     else if (pausado == true)
@@ -232,6 +301,7 @@ namespace ProyectoFederacion
             }
             return bandera;
         }
+        
         public string round
         {
             get {
@@ -246,11 +316,19 @@ namespace ProyectoFederacion
                 }
                 else if ((roundDesempate == false)&&(pausado==false))
                 {
-                    ret = "Round " + Convert.ToString(numeroRoundActual);
+                    if (estadoEntreRounds == true)
+                    {
+                        ret = "Descanso";
+                    }
+                    else
+                    {
+                        ret = "Round " + Convert.ToString(numeroRoundActual);
+                    }
                 }
                 return ret;
             }
         }
+        
         /// <summary>
         /// Solo es mostrado
         /// </summary>
@@ -271,8 +349,16 @@ namespace ProyectoFederacion
                 }
                 else
                 {
-                    minutos = (int)tiempoActual / 60;
-                    segundos = (int)tiempoActual % 60;
+                    if (estadoEntreRounds == true)
+                    {
+                        minutos = (int)tiempoActualEntreRounds / 60;
+                        segundos = (int)tiempoActualEntreRounds % 60;
+                    }
+                    else
+                    {
+                        minutos = (int)tiempoActual / 60;
+                        segundos = (int)tiempoActual % 60;
+                    }
                 }
                 
                 cadenaMinutos = Convert.ToString(minutos);

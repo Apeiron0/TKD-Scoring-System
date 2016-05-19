@@ -1047,12 +1047,13 @@ namespace ProyectoFederacion
 
         private void botonPausa_Click(object sender, EventArgs e)
         {
+            //inicia pausa de tiempo medico
             iniciarTiempoMedico();
         }
 
         private void botonStop_Click(object sender, EventArgs e)
         {
-            //pausa general del combate
+            //pausa general del combate (tiempo se detiene)
             pausaGeneral();
         }
 
