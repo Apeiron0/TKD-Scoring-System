@@ -15,19 +15,31 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_3770D49B54E343598E06B85A7DB09A01"
+        "MsmKey" = "8:_4238A43718E446B7A8B4E38BD0FE1AD6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5E8DE6BBF1DC4F09858FF9563410688A"
+        "MsmKey" = "8:_57A28C796F464685806898994259115C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5FDDACBFF48E4F4C852F0A7419F0A7E4"
+        "MsmKey" = "8:_7249892BFFD94EB7894FEF1F37FD5009"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_74D472D0619B48BA8FFEBF53131D6270"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9051845E8FCE400DA9A0EA8DF3053B63"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -45,19 +57,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_D7C41757E436484BBE5F2D6754698F08"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E06ECF65557B4A7E978EBE3414DAE910"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E131E42D9053436993A842E481461375"
+        "MsmKey" = "8:_B58AA1337265450A94B7ED611AB9A422"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -205,9 +205,29 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3770D49B54E343598E06B85A7DB09A01"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4238A43718E446B7A8B4E38BD0FE1AD6"
             {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\Escritorio\\software-tkd\\iconos\\manual-icon-master.ico"
+            "SourcePath" = "8:recursos\\ayuda-ico.ico"
+            "TargetName" = "8:ayuda-ico.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_200CC237AA974852A46F8FFA9DF35CC2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_57A28C796F464685806898994259115C"
+            {
+            "SourcePath" = "8:recursos\\manual-icon-master.ico"
             "TargetName" = "8:manual-icon-master.ico"
             "Tag" = "8:"
             "Folder" = "8:_200CC237AA974852A46F8FFA9DF35CC2"
@@ -225,10 +245,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5E8DE6BBF1DC4F09858FF9563410688A"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7249892BFFD94EB7894FEF1F37FD5009"
             {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\Escritorio\\software-tkd\\manual\\help.chm"
-            "TargetName" = "8:help.chm"
+            "SourcePath" = "8:recursos\\manual-ico.ico"
+            "TargetName" = "8:manual-ico.ico"
             "Tag" = "8:"
             "Folder" = "8:_200CC237AA974852A46F8FFA9DF35CC2"
             "Condition" = "8:"
@@ -245,10 +265,30 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5FDDACBFF48E4F4C852F0A7419F0A7E4"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_74D472D0619B48BA8FFEBF53131D6270"
             {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\Escritorio\\software-tkd\\manual\\manual.pdf"
+            "SourcePath" = "8:recursos\\manual.pdf"
             "TargetName" = "8:manual.pdf"
+            "Tag" = "8:"
+            "Folder" = "8:_200CC237AA974852A46F8FFA9DF35CC2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9051845E8FCE400DA9A0EA8DF3053B63"
+            {
+            "SourcePath" = "8:recursos\\help.chm"
+            "TargetName" = "8:help.chm"
             "Tag" = "8:"
             "Folder" = "8:_200CC237AA974852A46F8FFA9DF35CC2"
             "Condition" = "8:"
@@ -296,50 +336,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D7C41757E436484BBE5F2D6754698F08"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B58AA1337265450A94B7ED611AB9A422"
             {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\Escritorio\\software-tkd\\iconos\\icon.ico"
+            "SourcePath" = "8:recursos\\icon.ico"
             "TargetName" = "8:icon.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_200CC237AA974852A46F8FFA9DF35CC2"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E06ECF65557B4A7E978EBE3414DAE910"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\Escritorio\\software-tkd\\iconos\\manual-ico.ico"
-            "TargetName" = "8:manual-ico.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_200CC237AA974852A46F8FFA9DF35CC2"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E131E42D9053436993A842E481461375"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\Escritorio\\software-tkd\\iconos\\ayuda-ico.ico"
-            "TargetName" = "8:ayuda-ico.ico"
             "Tag" = "8:"
             "Folder" = "8:_200CC237AA974852A46F8FFA9DF35CC2"
             "Condition" = "8:"
@@ -586,7 +586,7 @@
             "Target" = "8:_B1A8E017EF724D018C4AAC096091CBBB"
             "Folder" = "8:_83DF2C8E725A479587972076652EE4D8"
             "WorkingFolder" = "8:_200CC237AA974852A46F8FFA9DF35CC2"
-            "Icon" = "8:_D7C41757E436484BBE5F2D6754698F08"
+            "Icon" = "8:_B58AA1337265450A94B7ED611AB9A422"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_ABCD221744EA4B1DB14670202F6C9C26"
@@ -597,10 +597,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_5FDDACBFF48E4F4C852F0A7419F0A7E4"
+            "Target" = "8:_74D472D0619B48BA8FFEBF53131D6270"
             "Folder" = "8:_83DF2C8E725A479587972076652EE4D8"
             "WorkingFolder" = "8:_200CC237AA974852A46F8FFA9DF35CC2"
-            "Icon" = "8:_E06ECF65557B4A7E978EBE3414DAE910"
+            "Icon" = "8:_7249892BFFD94EB7894FEF1F37FD5009"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C51620EF3FE04A0CA2AC413647F332B8"
@@ -614,7 +614,7 @@
             "Target" = "8:_B1A8E017EF724D018C4AAC096091CBBB"
             "Folder" = "8:_452CD214C2774B3A88E43E266B73244F"
             "WorkingFolder" = "8:_200CC237AA974852A46F8FFA9DF35CC2"
-            "Icon" = "8:_D7C41757E436484BBE5F2D6754698F08"
+            "Icon" = "8:_B58AA1337265450A94B7ED611AB9A422"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E7FDE94814A14439941F3A91C6A71183"
@@ -625,10 +625,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_5FDDACBFF48E4F4C852F0A7419F0A7E4"
+            "Target" = "8:_74D472D0619B48BA8FFEBF53131D6270"
             "Folder" = "8:_452CD214C2774B3A88E43E266B73244F"
             "WorkingFolder" = "8:_200CC237AA974852A46F8FFA9DF35CC2"
-            "Icon" = "8:_E06ECF65557B4A7E978EBE3414DAE910"
+            "Icon" = "8:_7249892BFFD94EB7894FEF1F37FD5009"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_EB08C4083710454F90A8720C6D46EE67"
@@ -639,10 +639,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_5E8DE6BBF1DC4F09858FF9563410688A"
+            "Target" = "8:_9051845E8FCE400DA9A0EA8DF3053B63"
             "Folder" = "8:_83DF2C8E725A479587972076652EE4D8"
             "WorkingFolder" = "8:_200CC237AA974852A46F8FFA9DF35CC2"
-            "Icon" = "8:"
+            "Icon" = "8:_4238A43718E446B7A8B4E38BD0FE1AD6"
             "Feature" = "8:"
             }
         }

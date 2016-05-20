@@ -26,6 +26,7 @@ namespace ProyectoFederacion
         private bool estadoTerminado = false;
         private bool banderaTiempoMedicoDetenido = false;
         private bool estadoEntreRounds = false;
+        private bool descansoDesempate = false;
 
         public Tiempo()
         { }
@@ -52,6 +53,7 @@ namespace ProyectoFederacion
             estadoDetenido = false;
             estadoTerminado = false;
             estadoEntreRounds = false;
+            descansoDesempate = false;
         }
         public double actual
         {
@@ -84,6 +86,7 @@ namespace ProyectoFederacion
         public bool combateTerminado
         {
             get { return estadoTerminado; }
+            set { this.estadoTerminado = value; }
         }
         public bool roundTerminado
         {
@@ -103,6 +106,11 @@ namespace ProyectoFederacion
         {
             get { return estadoEntreRounds; }
         }
+        public bool tiempoDescansoDesempate
+        {
+            get { return descansoDesempate; }
+            set { this.descansoDesempate = value; }
+        }
 
         public bool reiniciarDeTiempoMedico()
         {
@@ -116,21 +124,42 @@ namespace ProyectoFederacion
             banderaTiempoMedicoDetenido = true;
         }
 
+        /// <summary>
+        /// Inicia el tiempo de descanso entre rounds
+        /// </summary>
+        /// <returns></returns>
         public void iniciarDescanso()
         {
             estadoEntreRounds = true;
+            this.tiempoActualEntreRounds = this.tiempoEntreRounds;
         }
 
+        /// <summary>
+        /// Finaliza el tiempo de descanso entre rounds.
+        /// </summary>
         public void finalizarDescanso()
         {
             estadoEntreRounds = false;
+
+            if (descansoDesempate)
+            {
+                estadoTerminado = true;
+                descansoDesempate = false;
+            }
         }
         
+        /// <summary>
+        /// Iniciar una pausa general: se detiene cualquier conteo (reloj) que esté corriendo
+        /// </summary>
         public void detener()
         {
             estadoDetenido = true;
         }
         
+        /// <summary>
+        /// Función para iniciar de nuevo el reloj cuando se hace una pausa general
+        /// </summary>
+        /// <returns></returns>
         public bool reiniciar()
         {
             estadoDetenido = false;
@@ -143,6 +172,9 @@ namespace ProyectoFederacion
             estadoTerminado = true;
         }
         
+        /// <summary>
+        /// Función para iniciar el tiempo médico
+        /// </summary>
         public void pausar()
         {
             banderaTiempoMedicoDetenido = false;
@@ -201,6 +233,10 @@ namespace ProyectoFederacion
             }
         }
         
+        /// <summary>
+        /// Función para iniciar el contador de tiempo para rounds normales
+        /// </summary>
+        /// <returns></returns>
         public bool iniciar()
         {
             bool bandera = true;
@@ -231,6 +267,7 @@ namespace ProyectoFederacion
             estadoEntreRounds = false;
             tiempoActual = duracionRound;
             tiempoActualEntreRounds = tiempoEntreRounds;
+            descansoDesempate = false;
         }
         
         /// <summary>
@@ -240,6 +277,7 @@ namespace ProyectoFederacion
         public bool reloj()
         {
             bool bandera = true;
+
             if (estadoTerminado)
                 bandera = false;
             else
@@ -260,6 +298,13 @@ namespace ProyectoFederacion
                             else
                             {
                                 //terminó el tiempo de descanso entre rounds.
+                                if (descansoDesempate)
+                                {
+                                    //es importante regresar la bandera de estadoTerminado a true para que el round de desempate pueda comenzar
+                                    //de lo contrario el sistema asume que el combate finalizó
+                                    estadoTerminado = true;
+                                    descansoDesempate = false;
+                                }
                                 bandera = false;
                             }
                         }

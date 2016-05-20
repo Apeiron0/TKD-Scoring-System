@@ -103,10 +103,9 @@ namespace ProyectoFederacion
                         {
                             if (subsistemaPuntos.empate == true) //si hay un empate
                             {
-                                //preguntar si se desea un round de desempate
-                                if (MessageBox.Show("¿Iniciar round de desempate?", "Empate", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                                if (subsistemaTiempo.enDescanso == true)
                                 {
-                                    
+                                    subsistemaTiempo.finalizarDescanso();
                                     //en los subsistemas de puntos y tiempo se inicia la muerte súbita
                                     subsistemaPuntos.iniciarMuerteSubita();
                                     subsistemaTiempo.iniciarMuerteSubita();
@@ -132,21 +131,36 @@ namespace ProyectoFederacion
                                     MessageBox.Show("Iniciar muerte súbita", "Iniciar round", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     timerPrincipal.Enabled = true;
                                 }
-                                else //si el usuario respondió que no quiere determinar automáticamente al ganador, mostrar el formulario para determinar manualmente al ganador
+                                else
                                 {
-                                    DeterminarGanador ganador = new DeterminarGanador();
-                                    if (ganador.ShowDialog() == DialogResult.OK)
+                                    //preguntar si se desea un round de desempate
+                                    if (MessageBox.Show("¿Iniciar round de desempate?", "Empate", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
                                     {
-                                        int win = ganador.ganador;
-                                        if (win == Punteo.AZUL)
-                                            ganadorAzul();
-                                        else if (win == Punteo.ROJO)
-                                            ganadorRojo();
+                                        detenerClicSostenido(); //detener el timer del clic sostenido porque cuando se llega a cero, el evento mouseUp no funciona.
+                                        //esperar la confirmación del usuario para iniciar el siguiente round
+                                        MessageBox.Show("Iniciar descanso", "Iniciar descanso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        subsistemaTiempo.tiempoDescansoDesempate = true;
+                                        subsistemaTiempo.combateTerminado = false;
+                                        subsistemaTiempo.iniciarDescanso();
+                                        timerPrincipal.Enabled = true;
+                                        lblTiempo.Text = subsistemaTiempo.tiempo;
+                                        lblRound.Text = subsistemaTiempo.round;
                                     }
-                                    else
-                                        groupGanador.Enabled = true;
+                                    else //si el usuario respondió que no quiere determinar automáticamente al ganador, mostrar el formulario para determinar manualmente al ganador
+                                    {
+                                        DeterminarGanador ganador = new DeterminarGanador();
+                                        if (ganador.ShowDialog() == DialogResult.OK)
+                                        {
+                                            int win = ganador.ganador;
+                                            if (win == Punteo.AZUL)
+                                                ganadorAzul();
+                                            else if (win == Punteo.ROJO)
+                                                ganadorRojo();
+                                        }
+                                        else
+                                            groupGanador.Enabled = true;
+                                    }
                                 }
-
                             }
                             else //si no hay empate, se determina al ganador automáticamente
                             {
@@ -160,12 +174,28 @@ namespace ProyectoFederacion
                         }
                         else //si el combate no ha terminado, pero sí el round
                         {
-                            detenerClicSostenido(); //detener el timer del clic sostenido porque cuando se llega a cero, el evento mouseUp no funciona.
-                            //esperar la confirmación del usuario para iniciar el siguiente round
-                            MessageBox.Show("Iniciar siguiente round", "Iniciar round", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            timerPrincipal.Enabled = subsistemaTiempo.iniciar();
-                            lblTiempo.Text = subsistemaTiempo.tiempo;
-                            lblRound.Text = subsistemaTiempo.round;
+                            if (subsistemaTiempo.enDescanso == true)
+                            {
+                                detenerClicSostenido(); //detener el timer del clic sostenido porque cuando se llega a cero, el evento mouseUp no funciona.
+                                //esperar la confirmación del usuario para iniciar el siguiente round
+                                MessageBox.Show("Iniciar siguiente round", "Iniciar round", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                subsistemaTiempo.finalizarDescanso();
+                                timerPrincipal.Enabled = subsistemaTiempo.iniciar();
+                                lblTiempo.Text = subsistemaTiempo.tiempo;
+                                lblRound.Text = subsistemaTiempo.round;
+                            }
+                            else
+                            {
+                                detenerClicSostenido(); //detener el timer del clic sostenido porque cuando se llega a cero, el evento mouseUp no funciona.
+                                //esperar la confirmación del usuario para iniciar el siguiente round
+                                MessageBox.Show("Iniciar descanso", "Iniciar descanso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                subsistemaTiempo.iniciarDescanso();
+                                timerPrincipal.Enabled = true;
+                                lblTiempo.Text = subsistemaTiempo.tiempo;
+                                lblRound.Text = subsistemaTiempo.round;
+                            }
+
+                            
                         }
                     }
                 }
@@ -994,6 +1024,9 @@ namespace ProyectoFederacion
             lblRound.Text = subsistemaTiempo.round;
         }
 
+        /// <summary>
+        /// Desactiva el timer para el clic sostenido cuando se está agregando o quitando tiempo de alguno de los cronómetros
+        /// </summary>
         public void detenerClicSostenido()
         {
             timerClicSostenido.Enabled = false;
