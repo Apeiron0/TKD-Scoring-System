@@ -24,6 +24,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./TKDCombatManager/ProyectoFederacion/ProyectoFederacion.csproj
     - name: Build
-      run: dotnet build ./TKDCombatManager/ProyectoFederacion/ProyectoFederacion.csproj
+      run: dotnet build ./TKDCombatManager/ProyectoFederacion.sln
     - name: Test
       run: dotnet test --no-build --verbosity normal
