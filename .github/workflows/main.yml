@@ -17,6 +17,10 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 5.0.x
+    - name: Setup Nuget
+      uses: Nuget/setup-nuget@v1.0.5
+    - name: Restore nuget packages
+      run: nuget restore ./TKDCombatManager/ProyectoFederacion/ProyectoFederacion.csproj
     - name: Restore dependencies
       run: dotnet restore ./TKDCombatManager/ProyectoFederacion/ProyectoFederacion.csproj
     - name: Build
