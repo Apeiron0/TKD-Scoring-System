@@ -20,7 +20,7 @@ jobs:
     - name: Setup Nuget
       uses: Nuget/setup-nuget@v1.0.5
     - name: Restore nuget packages
-      run: nuget restore ./TKDCombatManager/ProyectoFederacion/ProyectoFederacion.csproj
+      run: nuget restore ./TKDCombatManager/ProyectoFederacion.sln
     - name: Restore dependencies
       run: dotnet restore ./TKDCombatManager/ProyectoFederacion/ProyectoFederacion.csproj
     - name: Build
