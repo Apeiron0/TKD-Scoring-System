@@ -1,9 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoFederacion", "ProyectoFederacion\ProyectoFederacion.csproj", "{64BE6493-443C-44EE-B372-2C90CEFFEEE1}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TKDCombatManager", "TKDCombatManager\TKDCombatManager.vdproj", "{016F0F54-9729-4DB1-826C-25A324FD80D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,11 @@ Global
 		{64BE6493-443C-44EE-B372-2C90CEFFEEE1}.Debug|x86.Build.0 = Debug|x86
 		{64BE6493-443C-44EE-B372-2C90CEFFEEE1}.Release|x86.ActiveCfg = Release|x86
 		{64BE6493-443C-44EE-B372-2C90CEFFEEE1}.Release|x86.Build.0 = Release|x86
-		{016F0F54-9729-4DB1-826C-25A324FD80D5}.Debug|x86.ActiveCfg = Debug
-		{016F0F54-9729-4DB1-826C-25A324FD80D5}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38EA5149-DEA7-4540-AF6F-EE71A41DD1F5}
 	EndGlobalSection
 EndGlobal
