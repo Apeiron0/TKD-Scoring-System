@@ -221,7 +221,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.73629F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.07774F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.25442F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
             this.tableLayoutPanel3.Controls.Add(this.lblNombreAzul, 3, 1);
             this.tableLayoutPanel3.Controls.Add(this.flayoutAmonestacionesAzul, 3, 2);
             this.tableLayoutPanel3.Controls.Add(this.lblTiempo, 2, 1);
@@ -249,9 +249,9 @@
             this.lblNombreAzul.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNombreAzul.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lblNombreAzul.ForeColor = System.Drawing.Color.Blue;
-            this.lblNombreAzul.Location = new System.Drawing.Point(825, 60);
+            this.lblNombreAzul.Location = new System.Drawing.Point(823, 60);
             this.lblNombreAzul.Name = "lblNombreAzul";
-            this.lblNombreAzul.Size = new System.Drawing.Size(277, 78);
+            this.lblNombreAzul.Size = new System.Drawing.Size(279, 78);
             this.lblNombreAzul.TabIndex = 3;
             this.lblNombreAzul.Text = "Azul";
             this.lblNombreAzul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -261,10 +261,10 @@
             this.tableLayoutPanel3.SetColumnSpan(this.flayoutAmonestacionesAzul, 2);
             this.flayoutAmonestacionesAzul.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flayoutAmonestacionesAzul.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flayoutAmonestacionesAzul.Location = new System.Drawing.Point(822, 138);
+            this.flayoutAmonestacionesAzul.Location = new System.Drawing.Point(820, 138);
             this.flayoutAmonestacionesAzul.Margin = new System.Windows.Forms.Padding(0);
             this.flayoutAmonestacionesAzul.Name = "flayoutAmonestacionesAzul";
-            this.flayoutAmonestacionesAzul.Size = new System.Drawing.Size(283, 100);
+            this.flayoutAmonestacionesAzul.Size = new System.Drawing.Size(285, 100);
             this.flayoutAmonestacionesAzul.TabIndex = 7;
             // 
             // lblTiempo
@@ -273,12 +273,12 @@
             this.lblTiempo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTiempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 180F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lblTiempo.ForeColor = System.Drawing.Color.Black;
-            this.lblTiempo.Location = new System.Drawing.Point(270, 60);
+            this.lblTiempo.Location = new System.Drawing.Point(269, 60);
             this.lblTiempo.Margin = new System.Windows.Forms.Padding(0);
             this.lblTiempo.Name = "lblTiempo";
             this.lblTiempo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tableLayoutPanel3.SetRowSpan(this.lblTiempo, 2);
-            this.lblTiempo.Size = new System.Drawing.Size(552, 178);
+            this.lblTiempo.Size = new System.Drawing.Size(551, 178);
             this.lblTiempo.TabIndex = 1;
             this.lblTiempo.Text = "00:00 ";
             this.lblTiempo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -344,9 +344,9 @@
             this.flowDerecha.Controls.Add(this.pic4PuntosA);
             this.flowDerecha.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowDerecha.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowDerecha.Location = new System.Drawing.Point(960, 3);
+            this.flowDerecha.Location = new System.Drawing.Point(958, 3);
             this.flowDerecha.Name = "flowDerecha";
-            this.flowDerecha.Size = new System.Drawing.Size(142, 54);
+            this.flowDerecha.Size = new System.Drawing.Size(144, 54);
             this.flowDerecha.TabIndex = 9;
             // 
             // picUnPuntoA
@@ -399,7 +399,7 @@
             this.lblNombreRojo.ForeColor = System.Drawing.Color.Red;
             this.lblNombreRojo.Location = new System.Drawing.Point(3, 60);
             this.lblNombreRojo.Name = "lblNombreRojo";
-            this.lblNombreRojo.Size = new System.Drawing.Size(264, 78);
+            this.lblNombreRojo.Size = new System.Drawing.Size(263, 78);
             this.lblNombreRojo.TabIndex = 2;
             this.lblNombreRojo.Text = "Rojo ";
             this.lblNombreRojo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -412,7 +412,7 @@
             this.lblRound.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRound.Location = new System.Drawing.Point(125, 0);
             this.lblRound.Name = "lblRound";
-            this.lblRound.Size = new System.Drawing.Size(829, 60);
+            this.lblRound.Size = new System.Drawing.Size(827, 60);
             this.lblRound.TabIndex = 10;
             this.lblRound.Text = "Round 1";
             this.lblRound.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -425,7 +425,7 @@
             this.flayoutAmonestacionesRojo.Location = new System.Drawing.Point(0, 138);
             this.flayoutAmonestacionesRojo.Margin = new System.Windows.Forms.Padding(0);
             this.flayoutAmonestacionesRojo.Name = "flayoutAmonestacionesRojo";
-            this.flayoutAmonestacionesRojo.Size = new System.Drawing.Size(270, 100);
+            this.flayoutAmonestacionesRojo.Size = new System.Drawing.Size(269, 100);
             this.flayoutAmonestacionesRojo.TabIndex = 6;
             // 
             // timerPrincipal
