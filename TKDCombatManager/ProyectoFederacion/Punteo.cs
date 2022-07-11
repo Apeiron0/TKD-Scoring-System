@@ -119,7 +119,7 @@ namespace ProyectoFederacion
             if ((amonestacionesMarcadasRojo % 2) == 0)
             {
                 marcarPuntoAzul(1);
-                quitarPuntoRojo();
+                //quitarPuntoRojo();
             }
             if (amonestacionesMarcadasRojo >= amonestacionesMaximas)
                 return true;
@@ -132,7 +132,7 @@ namespace ProyectoFederacion
             if ((amonestacionesMarcadasAzul % 2) == 0)
             {
                 marcarPuntoRojo(1);
-                quitarPuntoAzul();
+                //quitarPuntoAzul();
             }
             if (amonestacionesMarcadasAzul >= amonestacionesMaximas)
                 return true;
