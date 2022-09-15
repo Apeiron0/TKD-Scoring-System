@@ -333,7 +333,7 @@
             // boton3
             // 
             this.boton3.Image = global::ProyectoFederacion.Properties.Resources.desactivado;
-            this.boton3.Location = new System.Drawing.Point(140, 223);
+            this.boton3.Location = new System.Drawing.Point(141, 223);
             this.boton3.Name = "boton3";
             this.boton3.Size = new System.Drawing.Size(50, 50);
             this.boton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

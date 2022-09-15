@@ -152,11 +152,18 @@ namespace ProyectoFederacion
                 lblNombre.Text = nombre;
 
                 bool[] botones = state.GetButtons();
+
+                int sx = state.X;
+                int sy = state.Y;
+
+                int sz = state.Z;
+                
+
                 if (botones.Length >= 10)
                 {
                     if (botones[0] == true)
                     {
-                        boton0.Image = muestraActivado.Image;
+                        boton2.Image = muestraActivado.Image;
                     }
                     if (botones[1] == true)
                     {
@@ -164,11 +171,11 @@ namespace ProyectoFederacion
                     }
                     if (botones[2] == true)
                     {
-                        boton2.Image = muestraActivado.Image;
+                        boton3.Image = muestraActivado.Image;
                     }
                     if (botones[3] == true)
                     {
-                        boton3.Image = muestraActivado.Image;
+                        boton0.Image = muestraActivado.Image;
                     }
                     if (botones[4] == true)
                     {
@@ -182,10 +189,19 @@ namespace ProyectoFederacion
                     {
                         boton6.Image = muestraActivado.Image;
                     }
+                    if (sz > 900)
+                    {
+                        boton6.Image = muestraActivado.Image;
+                    }
                     if (botones[7] == true)
+                    {
+                        boton7.Image = muestraActivado.Image;                        
+                    }
+                    if (sz<-900)
                     {
                         boton7.Image = muestraActivado.Image;
                     }
+
                     if (botones[8] == true)
                     {
                         boton8.Image = muestraActivado.Image;
@@ -193,9 +209,8 @@ namespace ProyectoFederacion
                     if (botones[9] == true)
                     {
                         boton9.Image = muestraActivado.Image;
-                    }
-                    int sx = state.X;
-                    int sy = state.Y;
+                    } 
+                    
                     if (sx == -1000)
                     {
                         boton13.Image = muestraActivado.Image;
