@@ -13,6 +13,7 @@ namespace ProyectoFederacion
 {
     public partial class Tablero : Form
     {
+
         private int direccion = 0;
         private Tiempo subsistemaTiempo;
         private Punteo subsistemaPuntos;
@@ -1192,11 +1193,16 @@ namespace ProyectoFederacion
             try
             {
                 bool[] botones = estado.GetButtons();
+                int sx = estado.X;
+                int sy = estado.Y;
+
+                int sz = estado.Z;
+
                 if (botones.Length >= 10)
                 {
                     if (botones[0] == true)
                     {
-                        marcarPuntoJoystick(idJoystick, 0);
+                        marcarPuntoJoystick(idJoystick, 2);
                     }
                     if (botones[1] == true)
                     {
@@ -1204,11 +1210,11 @@ namespace ProyectoFederacion
                     }
                     if (botones[2] == true)
                     {
-                        marcarPuntoJoystick(idJoystick, 2);
+                        marcarPuntoJoystick(idJoystick, 3);
                     }
                     if (botones[3] == true)
                     {
-                        marcarPuntoJoystick(idJoystick, 3);
+                        marcarPuntoJoystick(idJoystick, 0);
                     }
                     if (botones[4] == true)
                     {
@@ -1218,11 +1224,11 @@ namespace ProyectoFederacion
                     {
                         marcarPuntoJoystick(idJoystick, 5);
                     }
-                    if (botones[6] == true)
+                    if (botones[6] == true || sz > 900)
                     {
                         marcarPuntoJoystick(idJoystick, 6);
                     }
-                    if (botones[7] == true)
+                    if (botones[7] == true || sz < -900)
                     {
                         marcarPuntoJoystick(idJoystick, 7);
                     }
@@ -1234,8 +1240,7 @@ namespace ProyectoFederacion
                     {
                         marcarPuntoJoystick(idJoystick, 9);
                     }
-                    int sx = estado.X;
-                    int sy = estado.Y;
+                    
                     if (sx == -1000)
                     {
                         marcarPuntoJoystick(idJoystick, 13);
