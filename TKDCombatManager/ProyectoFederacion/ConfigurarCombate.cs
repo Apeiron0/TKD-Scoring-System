@@ -95,5 +95,20 @@ namespace ProyectoFederacion
                 this.Close();
         }
 
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton r=sender as RadioButton;
+
+            if (r.Checked == true)
+            {
+                groupRounds.Enabled = false;
+                radioTresRounds.Checked = true;
+            }
+            else
+            {
+                groupRounds.Enabled= true;
+            }
+
+        }
     }
 }

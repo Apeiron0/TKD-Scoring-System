@@ -47,11 +47,14 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tmpPausaRounds = new System.Windows.Forms.MaskedTextBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tmpPausaRounds = new System.Windows.Forms.MaskedTextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.spinAmonestaciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinDiferenciaMaxima)).BeginInit();
             this.groupRounds.SuspendLayout();
@@ -59,6 +62,7 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -269,6 +273,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtTiempoMedico, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 1, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -283,6 +288,18 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(413, 314);
             this.tableLayoutPanel1.TabIndex = 29;
             // 
+            // tmpPausaRounds
+            // 
+            this.tmpPausaRounds.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tmpPausaRounds.Location = new System.Drawing.Point(209, 77);
+            this.tmpPausaRounds.Mask = "00:00";
+            this.tmpPausaRounds.Name = "tmpPausaRounds";
+            this.tmpPausaRounds.Size = new System.Drawing.Size(201, 20);
+            this.tmpPausaRounds.TabIndex = 3;
+            this.tmpPausaRounds.Text = "0100";
+            this.tmpPausaRounds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tmpPausaRounds.ValidatingType = typeof(System.DateTime);
+            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.txtTiempoMarcaje);
@@ -292,6 +309,17 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(201, 35);
             this.flowLayoutPanel2.TabIndex = 27;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Location = new System.Drawing.Point(3, 74);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(200, 37);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Pausa entre rounds";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // flowLayoutPanel1
             // 
@@ -308,28 +336,39 @@
             // 
             this.helpProvider1.HelpNamespace = "";
             // 
-            // label7
+            // groupBox1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(3, 74);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(200, 37);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "Pausa entre rounds";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Location = new System.Drawing.Point(209, 159);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 74);
+            this.groupBox1.TabIndex = 29;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Formato";
             // 
-            // tmpPausaRounds
+            // radioButton1
             // 
-            this.tmpPausaRounds.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tmpPausaRounds.Location = new System.Drawing.Point(209, 77);
-            this.tmpPausaRounds.Mask = "00:00";
-            this.tmpPausaRounds.Name = "tmpPausaRounds";
-            this.tmpPausaRounds.Size = new System.Drawing.Size(201, 20);
-            this.tmpPausaRounds.TabIndex = 3;
-            this.tmpPausaRounds.Text = "0100";
-            this.tmpPausaRounds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tmpPausaRounds.ValidatingType = typeof(System.DateTime);
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(7, 19);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(77, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Tradicional";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(7, 42);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(87, 17);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.Text = "El Mejor de 3";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // ConfigurarCombate
             // 
@@ -359,6 +398,8 @@
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -388,5 +429,8 @@
         private System.Windows.Forms.HelpProvider helpProvider1;
         private System.Windows.Forms.MaskedTextBox tmpPausaRounds;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
