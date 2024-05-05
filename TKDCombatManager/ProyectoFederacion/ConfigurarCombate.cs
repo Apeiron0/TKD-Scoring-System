@@ -32,6 +32,8 @@ namespace ProyectoFederacion
             int diferenciaPuntos = (int)spinDiferenciaMaxima.Value;
             int amonestaciones = (int)spinAmonestaciones.Value;
 
+            bool formatoTradicional = true;
+
             string tMedico = txtTiempoMedico.Text;
             tMedico = tMedico.Replace(" ", "");
             string[] lstTiempoMedico = tMedico.Split(':');
@@ -61,13 +63,16 @@ namespace ProyectoFederacion
             double tMarcajeSegundos = (lstTiempoMarcaje[1].Equals("")) ? 0 : Convert.ToDouble(lstTiempoMarcaje[1]);
             tiempoMarcaje = (tMarcajeMinutos + (tMarcajeSegundos / 100))*100;
 
+            if (radioButton2.Checked == true)
+                formatoTradicional = false;
+
             if (radioDosRounds.Checked == true)
                 rounds = 2;
 
             Tiempo motorTiempo = new Tiempo(tiempoNormal, tiempoMedico, rounds, tiempoEntreRounds);
             Punteo motorPuntos = new Punteo(diferenciaPuntos, amonestaciones, tiempoMarcaje);
 
-            Tablero t = new Tablero(motorTiempo, motorPuntos);
+            Tablero t = new Tablero(motorTiempo, motorPuntos,formatoTradicional);
             t.Show(this);
         }
 

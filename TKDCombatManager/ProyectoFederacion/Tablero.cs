@@ -30,7 +30,7 @@ namespace ProyectoFederacion
         private double contador4PuntosTimerAzul = 0;
         private Size tamanioStandar;
 
-        public Tablero(Tiempo motorTiempo, Punteo motorPunteo)
+        public Tablero(Tiempo motorTiempo, Punteo motorPunteo, bool formatoTradicional)
         {
             InitializeComponent();
 
