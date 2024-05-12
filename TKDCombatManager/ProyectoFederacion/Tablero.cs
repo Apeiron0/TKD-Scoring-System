@@ -48,19 +48,53 @@ namespace ProyectoFederacion
                 tamanioStandar = gamRojo[i].Size;
                 break;
             }
-            
-            picUnPuntoA.Visible = false;
-            picUnPuntoR.Visible = false;
-            picDosPuntosA.Visible = false;
-            picDosPuntosR.Visible = false;
-            picTresPuntosA.Visible = false;
-            picTresPuntosR.Visible = false;
-            pic4PuntosA.Visible = false;
-            pic4PuntosR.Visible = false;
-            
+            //Azul
+                
+            //Juez 1
+            picUnPuntoA_j1.Visible      = false;
+            picDosPuntoA_j1.Visible     = false;
+            picTresPuntoA_j1.Visible    = false;
+            picCuatroPuntoA_j1.Visible  = false;
+
+            //Juez 2
+            picUnPuntoA_j2.Visible      = false;
+            picDosPuntoA_j2.Visible     = false;
+            picTresPuntoA_j2.Visible    = false;
+            picCuatroPuntoA_j2.Visible  = false;
+
+            //Juez3
+            picUnPuntoA_j3.Visible      = false;
+            picDosPuntosA_j3.Visible    = false;
+            picTresPuntosA_j3.Visible   = false;
+            pic4PuntosA_j3.Visible      = false;
+
+
+            //Rojo
+
+            //Juez 1
+            picUnPuntoR_j1.Visible      = false;
+            picDosPuntoR_j1.Visible     = false;
+            picTresPuntoR_j1.Visible    = false;
+            picCuatroPuntoR_j1.Visible  = false;
+
+            //Juez 2
+            picUnPuntoR_j2.Visible      = false;
+            picDosPuntoR_j2.Visible     = false;
+            picTresPuntoR_j2.Visible    = false;
+            picCuatroPuntoR_j2.Visible  = false;
+
+            //Juez 3
+            picUnPuntoR_j3.Visible      = false;
+            picDosPuntosR_j3.Visible    = false;
+            picTresPuntosR_j3.Visible   = false;
+            pic4PuntosR_j3.Visible      = false;
+
+            lbl_formato.Visible = false;
+
             int size = Hardware.cantidadDispositivos;
-            if (size > 0)
+            if (size >= 0)
             {
+                MessageBox.Show("No se ha detectado ningun dispositivo conectado","Dispositivos no detectados");
             }
         }
 
@@ -579,14 +613,14 @@ namespace ProyectoFederacion
 
             }
 
-            picUnPuntoA.Visible = false;
-            picUnPuntoR.Visible = false;
-            picDosPuntosA.Visible = false;
-            picDosPuntosR.Visible = false;
-            picTresPuntosA.Visible = false;
-            picTresPuntosR.Visible = false;
-            pic4PuntosA.Visible = false;
-            pic4PuntosR.Visible = false;
+            picUnPuntoA_j3.Visible = false;
+            picUnPuntoR_j3.Visible = false;
+            picDosPuntosA_j3.Visible = false;
+            picDosPuntosR_j3.Visible = false;
+            picTresPuntosA_j3.Visible = false;
+            picTresPuntosR_j3.Visible = false;
+            pic4PuntosA_j3.Visible = false;
+            pic4PuntosR_j3.Visible = false;
 
             timerMarcajeAzul.Enabled = false;
             timerMarcajeRojo.Enabled = false;
@@ -1279,7 +1313,7 @@ namespace ProyectoFederacion
                         {
                             contadorTimerRojo = 0;
                             timerMarcajeRojo.Enabled = true;
-                            picUnPuntoR.Visible = true;
+                            picUnPuntoR_j3.Visible = true;
                         }
                         int p = Hardware.marcajeUnPuntoRojo(idJoystick);
                         if (p == 1)
@@ -1293,7 +1327,7 @@ namespace ProyectoFederacion
                         {
                             contador2PuntosTimerRojo = 0;
                             timerMarcaje2PuntosR.Enabled = true;
-                            picDosPuntosR.Visible = true;
+                            picDosPuntosR_j3.Visible = true;
                         }
                         int p = Hardware.marcajeDosPuntosRojo(idJoystick);
                         if (p == 2)
@@ -1301,7 +1335,7 @@ namespace ProyectoFederacion
                             timerMarcaje2PuntosR.Enabled = false;
                             sumarPuntoRojo(2);
                             Hardware.resetDosPuntosRojo();
-                            picDosPuntosR.Visible = false;
+                            picDosPuntosR_j3.Visible = false;
                         }
                     }
                     if (valor == 3)
@@ -1310,7 +1344,7 @@ namespace ProyectoFederacion
                         {
                             contador3PuntosTimerRojo = 0;
                             timerMarcaje3PuntosR.Enabled = true;
-                            picTresPuntosR.Visible = true;
+                            picTresPuntosR_j3.Visible = true;
                         }
                         int p = Hardware.marcajeTresPuntosRojo(idJoystick);
                         if (p == 3)
@@ -1328,7 +1362,7 @@ namespace ProyectoFederacion
                         {
                             contador4PuntosTimerRojo = 0;
                             timerMarcaje4PuntosR.Enabled = true;
-                            pic4PuntosR.Visible = true;
+                            pic4PuntosR_j3.Visible = true;
                         }
                         int p = Hardware.marcajeCuatroPuntosRojo(idJoystick);
                         if (p == 4)
@@ -1336,7 +1370,7 @@ namespace ProyectoFederacion
                             timerMarcaje4PuntosR.Enabled = false;
                             sumarPuntoRojo(4);
                             Hardware.resetCuatroPuntosRojo();
-                            pic4PuntosR.Visible = false;
+                            pic4PuntosR_j3.Visible = false;
                         }
                     }
                 }
@@ -1348,7 +1382,7 @@ namespace ProyectoFederacion
                         {
                             contadorTimerAzul = 0;
                             timerMarcajeAzul.Enabled = true;
-                            picUnPuntoA.Visible = true;
+                            picUnPuntoA_j3.Visible = true;
                         }
                         int p = Hardware.marcajeUnPuntoAzul(idJoystick);
                         if (p == 1)
@@ -1362,7 +1396,7 @@ namespace ProyectoFederacion
                         {
                             contador2PuntosTimerAzul = 0;
                             timerMarcaje2PuntosA.Enabled = true;
-                            picDosPuntosA.Visible = true;
+                            picDosPuntosA_j3.Visible = true;
                         }
                         int p = Hardware.marcajeDosPuntosAzul(idJoystick);
                         if (p == 2)
@@ -1370,7 +1404,7 @@ namespace ProyectoFederacion
                             timerMarcaje2PuntosA.Enabled = false;
                             sumarPuntoAzul(2);
                             Hardware.resetDosPuntosAzul();
-                            picDosPuntosA.Visible = false;
+                            picDosPuntosA_j3.Visible = false;
                         }
                     }
                     if (valor == 3)
@@ -1379,7 +1413,7 @@ namespace ProyectoFederacion
                         {
                             contador3PuntosTimerAzul = 0;
                             timerMarcaje3PuntosA.Enabled = true;
-                            picTresPuntosA.Visible = true;
+                            picTresPuntosA_j3.Visible = true;
                         }
                         int p = Hardware.marcajeTresPuntosAzul(idJoystick);
                         if (p == 3)
@@ -1397,7 +1431,7 @@ namespace ProyectoFederacion
                         {
                             contador4PuntosTimerAzul = 0;
                             timerMarcaje4PuntosA.Enabled = true;
-                            pic4PuntosA.Visible = true;
+                            pic4PuntosA_j3.Visible = true;
                         }
                         int p = Hardware.marcajeCuatroPuntosAzul(idJoystick);
                         if (p == 4)
@@ -1405,7 +1439,7 @@ namespace ProyectoFederacion
                             timerMarcaje4PuntosA.Enabled = false;
                             sumarPuntoAzul(4);
                             Hardware.resetCuatroPuntosAzul();
-                            pic4PuntosA.Visible = false;
+                            pic4PuntosA_j3.Visible = false;
                         }
                     }
                 }                
@@ -1427,7 +1461,7 @@ namespace ProyectoFederacion
             }
             else
             {
-                picUnPuntoR.Visible = false;
+                picUnPuntoR_j3.Visible = false;
             }
         }
 
@@ -1456,7 +1490,7 @@ namespace ProyectoFederacion
             }
             else
             {
-                picUnPuntoA.Visible = false;
+                picUnPuntoA_j3.Visible = false;
             }
         }
 
@@ -1496,7 +1530,7 @@ namespace ProyectoFederacion
                 sumarPuntoRojo(2);
             }
             Hardware.resetDosPuntosRojo();
-            picDosPuntosR.Visible = false;
+            picDosPuntosR_j3.Visible = false;
         }
 
         private void timerMarcaje2PuntosA_Tick(object sender, EventArgs e)
@@ -1513,7 +1547,7 @@ namespace ProyectoFederacion
             if (puntoMarcado == 2)
                 sumarPuntoAzul(2);
             Hardware.resetDosPuntosAzul();
-            picDosPuntosA.Visible = false;
+            picDosPuntosA_j3.Visible = false;
         }
 
         private void timerMarcaje3PuntosR_Tick(object sender, EventArgs e)
@@ -1537,7 +1571,7 @@ namespace ProyectoFederacion
             }
             else
             {
-                picTresPuntosR.Visible = false;
+                picTresPuntosR_j3.Visible = false;
             }
         }
 
@@ -1561,7 +1595,7 @@ namespace ProyectoFederacion
                 timerMarcaje3PuntosA.Enabled = true;
             }
             else
-                picTresPuntosA.Visible = false;       
+                picTresPuntosA_j3.Visible = false;       
         }
 
         private void timerMarcaje4PuntosR_Tick(object sender, EventArgs e)
@@ -1578,7 +1612,7 @@ namespace ProyectoFederacion
             if (puntoMarcado == 4)
                 sumarPuntoRojo(4);
             Hardware.resetCuatroPuntosRojo();
-            pic4PuntosR.Visible = false;
+            pic4PuntosR_j3.Visible = false;
         }
 
         private void timerMarcaje4PuntosA_Tick(object sender, EventArgs e)
@@ -1595,17 +1629,8 @@ namespace ProyectoFederacion
             if (puntoMarcado == 4)
                 sumarPuntoAzul(4);
             Hardware.resetCuatroPuntosAzul();
-            pic4PuntosA.Visible = false;
+            pic4PuntosA_j3.Visible = false;
         }
-
-        private void lblRound_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Tablero_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
