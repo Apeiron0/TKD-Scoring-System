@@ -70,6 +70,10 @@
             this.lblRound = new System.Windows.Forms.Label();
             this.lblAzul = new System.Windows.Forms.Label();
             this.lblRojo = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_R1 = new System.Windows.Forms.Label();
+            this.lbl_R1_puntos_rojo = new System.Windows.Forms.Label();
+            this.lbl_R1_puntos_azul = new System.Windows.Forms.Label();
             this.timerPrincipal = new System.Windows.Forms.Timer(this.components);
             this.timerMarcajeRojo = new System.Windows.Forms.Timer(this.components);
             this.timerBlink = new System.Windows.Forms.Timer(this.components);
@@ -130,6 +134,18 @@
             this.timerMarcaje4PuntosA = new System.Windows.Forms.Timer(this.components);
             this.timerMarcaje4PuntosR = new System.Windows.Forms.Timer(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.lbl_R1_amonestaciones_rojo = new System.Windows.Forms.Label();
+            this.lbl_R1_amonestaciones_azul = new System.Windows.Forms.Label();
+            this.lbl_R2 = new System.Windows.Forms.Label();
+            this.lbl_R2_puntos_rojo = new System.Windows.Forms.Label();
+            this.lbl_R2_puntos_azul = new System.Windows.Forms.Label();
+            this.lbl_R2_amonestaciones_rojo = new System.Windows.Forms.Label();
+            this.lbl_R2_amonestaciones_azul = new System.Windows.Forms.Label();
+            this.lbl_R3 = new System.Windows.Forms.Label();
+            this.lbl_R3_puntos_rojo = new System.Windows.Forms.Label();
+            this.lbl_R3_puntos_azul = new System.Windows.Forms.Label();
+            this.lbl_R3_amonestaciones_rojo = new System.Windows.Forms.Label();
+            this.lbl_r3_amonestaciones_azul = new System.Windows.Forms.Label();
             this.tablePrincipal.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.flow_j3_rojo.SuspendLayout();
@@ -162,6 +178,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picDosPuntoR_j2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTresPuntoR_j2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCuatroPuntoR_j2)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botonSalir)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -211,30 +228,33 @@
             // 
             // tablePrincipal
             // 
-            this.tablePrincipal.ColumnCount = 2;
-            this.tablePrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tablePrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tablePrincipal.ColumnCount = 3;
+            this.tablePrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tablePrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tablePrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tablePrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tablePrincipal.Controls.Add(this.tableLayoutPanel3, 0, 0);
-            this.tablePrincipal.Controls.Add(this.lblAzul, 1, 1);
+            this.tablePrincipal.Controls.Add(this.lblAzul, 2, 1);
             this.tablePrincipal.Controls.Add(this.lblRojo, 0, 1);
+            this.tablePrincipal.Controls.Add(this.tableLayoutPanel2, 1, 1);
             this.tablePrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tablePrincipal.Location = new System.Drawing.Point(0, 0);
             this.tablePrincipal.Name = "tablePrincipal";
             this.tablePrincipal.RowCount = 2;
             this.tablePrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 244F));
             this.tablePrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tablePrincipal.Size = new System.Drawing.Size(1662, 732);
+            this.tablePrincipal.Size = new System.Drawing.Size(1841, 1061);
             this.tablePrincipal.TabIndex = 33;
             // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 5;
-            this.tablePrincipal.SetColumnSpan(this.tableLayoutPanel3, 2);
+            this.tablePrincipal.SetColumnSpan(this.tableLayoutPanel3, 3);
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.72416F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.03255F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.2433F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
             this.tableLayoutPanel3.Controls.Add(this.lblNombreAzul, 3, 3);
             this.tableLayoutPanel3.Controls.Add(this.flayoutAmonestacionesAzul, 3, 4);
             this.tableLayoutPanel3.Controls.Add(this.flow_j3_rojo, 0, 2);
@@ -257,7 +277,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1656, 238);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1835, 238);
             this.tableLayoutPanel3.TabIndex = 6;
             // 
             // lblNombreAzul
@@ -268,9 +288,9 @@
             this.lblNombreAzul.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNombreAzul.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lblNombreAzul.ForeColor = System.Drawing.Color.Blue;
-            this.lblNombreAzul.Location = new System.Drawing.Point(1291, 105);
+            this.lblNombreAzul.Location = new System.Drawing.Point(1439, 105);
             this.lblNombreAzul.Name = "lblNombreAzul";
-            this.lblNombreAzul.Size = new System.Drawing.Size(362, 78);
+            this.lblNombreAzul.Size = new System.Drawing.Size(393, 78);
             this.lblNombreAzul.TabIndex = 3;
             this.lblNombreAzul.Text = "Azul";
             this.lblNombreAzul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -280,10 +300,10 @@
             this.tableLayoutPanel3.SetColumnSpan(this.flayoutAmonestacionesAzul, 2);
             this.flayoutAmonestacionesAzul.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flayoutAmonestacionesAzul.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flayoutAmonestacionesAzul.Location = new System.Drawing.Point(1288, 183);
+            this.flayoutAmonestacionesAzul.Location = new System.Drawing.Point(1436, 183);
             this.flayoutAmonestacionesAzul.Margin = new System.Windows.Forms.Padding(0);
             this.flayoutAmonestacionesAzul.Name = "flayoutAmonestacionesAzul";
-            this.flayoutAmonestacionesAzul.Size = new System.Drawing.Size(368, 55);
+            this.flayoutAmonestacionesAzul.Size = new System.Drawing.Size(399, 55);
             this.flayoutAmonestacionesAzul.TabIndex = 7;
             // 
             // flow_j3_rojo
@@ -347,9 +367,9 @@
             this.flow_j3_azul.Controls.Add(this.pic4PuntosA_j3);
             this.flow_j3_azul.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flow_j3_azul.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flow_j3_azul.Location = new System.Drawing.Point(1512, 73);
+            this.flow_j3_azul.Location = new System.Drawing.Point(1689, 73);
             this.flow_j3_azul.Name = "flow_j3_azul";
-            this.flow_j3_azul.Size = new System.Drawing.Size(141, 29);
+            this.flow_j3_azul.Size = new System.Drawing.Size(143, 29);
             this.flow_j3_azul.TabIndex = 9;
             // 
             // picUnPuntoA_j3
@@ -402,7 +422,7 @@
             this.lblNombreRojo.ForeColor = System.Drawing.Color.Red;
             this.lblNombreRojo.Location = new System.Drawing.Point(3, 105);
             this.lblNombreRojo.Name = "lblNombreRojo";
-            this.lblNombreRojo.Size = new System.Drawing.Size(380, 78);
+            this.lblNombreRojo.Size = new System.Drawing.Size(411, 78);
             this.lblNombreRojo.TabIndex = 2;
             this.lblNombreRojo.Text = "Rojo ";
             this.lblNombreRojo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -414,7 +434,7 @@
             this.flayoutAmonestacionesRojo.Location = new System.Drawing.Point(0, 183);
             this.flayoutAmonestacionesRojo.Margin = new System.Windows.Forms.Padding(0);
             this.flayoutAmonestacionesRojo.Name = "flayoutAmonestacionesRojo";
-            this.flayoutAmonestacionesRojo.Size = new System.Drawing.Size(386, 55);
+            this.flayoutAmonestacionesRojo.Size = new System.Drawing.Size(417, 55);
             this.flayoutAmonestacionesRojo.TabIndex = 6;
             // 
             // lblTiempo
@@ -423,12 +443,12 @@
             this.lblTiempo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTiempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 180F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lblTiempo.ForeColor = System.Drawing.Color.Black;
-            this.lblTiempo.Location = new System.Drawing.Point(386, 70);
+            this.lblTiempo.Location = new System.Drawing.Point(417, 70);
             this.lblTiempo.Margin = new System.Windows.Forms.Padding(0);
             this.lblTiempo.Name = "lblTiempo";
             this.lblTiempo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tableLayoutPanel3.SetRowSpan(this.lblTiempo, 3);
-            this.lblTiempo.Size = new System.Drawing.Size(902, 168);
+            this.lblTiempo.Size = new System.Drawing.Size(1019, 168);
             this.lblTiempo.TabIndex = 1;
             this.lblTiempo.Text = "00:00 ";
             this.lblTiempo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -439,7 +459,7 @@
             this.flow_j1_azul.Controls.Add(this.picDosPuntoA_j1);
             this.flow_j1_azul.Controls.Add(this.picTresPuntoA_j1);
             this.flow_j1_azul.Controls.Add(this.picCuatroPuntoA_j1);
-            this.flow_j1_azul.Location = new System.Drawing.Point(1512, 3);
+            this.flow_j1_azul.Location = new System.Drawing.Point(1689, 3);
             this.flow_j1_azul.Name = "flow_j1_azul";
             this.flow_j1_azul.Size = new System.Drawing.Size(139, 29);
             this.flow_j1_azul.TabIndex = 11;
@@ -490,7 +510,7 @@
             this.flow_j2_azul.Controls.Add(this.picDosPuntoA_j2);
             this.flow_j2_azul.Controls.Add(this.picTresPuntoA_j2);
             this.flow_j2_azul.Controls.Add(this.picCuatroPuntoA_j2);
-            this.flow_j2_azul.Location = new System.Drawing.Point(1512, 38);
+            this.flow_j2_azul.Location = new System.Drawing.Point(1689, 38);
             this.flow_j2_azul.Name = "flow_j2_azul";
             this.flow_j2_azul.Size = new System.Drawing.Size(139, 29);
             this.flow_j2_azul.TabIndex = 12;
@@ -646,7 +666,7 @@
             this.lblRound.Location = new System.Drawing.Point(147, 0);
             this.lblRound.Name = "lblRound";
             this.tableLayoutPanel3.SetRowSpan(this.lblRound, 2);
-            this.lblRound.Size = new System.Drawing.Size(1359, 70);
+            this.lblRound.Size = new System.Drawing.Size(1536, 70);
             this.lblRound.TabIndex = 10;
             this.lblRound.Text = "Round 1";
             this.lblRound.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -658,9 +678,9 @@
             this.lblAzul.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblAzul.Font = new System.Drawing.Font("Impact", 250F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAzul.ForeColor = System.Drawing.Color.White;
-            this.lblAzul.Location = new System.Drawing.Point(834, 244);
+            this.lblAzul.Location = new System.Drawing.Point(1107, 244);
             this.lblAzul.Name = "lblAzul";
-            this.lblAzul.Size = new System.Drawing.Size(825, 488);
+            this.lblAzul.Size = new System.Drawing.Size(731, 817);
             this.lblAzul.TabIndex = 5;
             this.lblAzul.Text = "0";
             this.lblAzul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -674,10 +694,89 @@
             this.lblRojo.ForeColor = System.Drawing.Color.White;
             this.lblRojo.Location = new System.Drawing.Point(3, 244);
             this.lblRojo.Name = "lblRojo";
-            this.lblRojo.Size = new System.Drawing.Size(825, 488);
+            this.lblRojo.Size = new System.Drawing.Size(730, 817);
             this.lblRojo.TabIndex = 4;
             this.lblRojo.Text = "0";
             this.lblRojo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.lbl_R1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_R1_puntos_rojo, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_R1_puntos_azul, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_R1_amonestaciones_rojo, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_R1_amonestaciones_azul, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_R2, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_R2_puntos_rojo, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_R2_puntos_azul, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_R2_amonestaciones_rojo, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_R2_amonestaciones_azul, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_R3, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_R3_puntos_rojo, 0, 7);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_R3_puntos_azul, 1, 7);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_R3_amonestaciones_rojo, 0, 8);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_r3_amonestaciones_azul, 1, 8);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(739, 247);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 10;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(362, 811);
+            this.tableLayoutPanel2.TabIndex = 7;
+            // 
+            // lbl_R1
+            // 
+            this.lbl_R1.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.lbl_R1, 2);
+            this.lbl_R1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_R1.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_R1.Location = new System.Drawing.Point(3, 0);
+            this.lbl_R1.Name = "lbl_R1";
+            this.lbl_R1.Size = new System.Drawing.Size(356, 85);
+            this.lbl_R1.TabIndex = 0;
+            this.lbl_R1.Text = "R1";
+            this.lbl_R1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_R1_puntos_rojo
+            // 
+            this.lbl_R1_puntos_rojo.AutoSize = true;
+            this.lbl_R1_puntos_rojo.BackColor = System.Drawing.Color.Red;
+            this.lbl_R1_puntos_rojo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_R1_puntos_rojo.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_R1_puntos_rojo.ForeColor = System.Drawing.Color.White;
+            this.lbl_R1_puntos_rojo.Location = new System.Drawing.Point(3, 85);
+            this.lbl_R1_puntos_rojo.Name = "lbl_R1_puntos_rojo";
+            this.lbl_R1_puntos_rojo.Size = new System.Drawing.Size(175, 85);
+            this.lbl_R1_puntos_rojo.TabIndex = 1;
+            this.lbl_R1_puntos_rojo.Text = "0";
+            this.lbl_R1_puntos_rojo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_R1_puntos_azul
+            // 
+            this.lbl_R1_puntos_azul.AutoSize = true;
+            this.lbl_R1_puntos_azul.BackColor = System.Drawing.Color.Blue;
+            this.lbl_R1_puntos_azul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_R1_puntos_azul.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_R1_puntos_azul.ForeColor = System.Drawing.Color.White;
+            this.lbl_R1_puntos_azul.Location = new System.Drawing.Point(184, 85);
+            this.lbl_R1_puntos_azul.Name = "lbl_R1_puntos_azul";
+            this.lbl_R1_puntos_azul.Size = new System.Drawing.Size(175, 85);
+            this.lbl_R1_puntos_azul.TabIndex = 2;
+            this.lbl_R1_puntos_azul.Text = "0";
+            this.lbl_R1_puntos_azul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timerPrincipal
             // 
@@ -703,7 +802,7 @@
             this.flowLayoutPanel2.Controls.Add(this.botonSalir);
             this.flowLayoutPanel2.Controls.Add(this.label1);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(1595, 3);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(1774, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(64, 51);
             this.flowLayoutPanel2.TabIndex = 39;
@@ -1058,6 +1157,7 @@
             // 
             // flowLayoutPanel5
             // 
+            this.flowLayoutPanel5.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel5.Controls.Add(this.groupPuntos);
             this.flowLayoutPanel5.Controls.Add(this.groupAmonestaciones);
             this.flowLayoutPanel5.Controls.Add(this.groupGanador);
@@ -1077,7 +1177,7 @@
             this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(1586, 51);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(1765, 51);
             this.flowLayoutPanel5.TabIndex = 32;
             // 
             // groupBox1
@@ -1255,11 +1355,11 @@
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 675);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 1004);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1662, 57);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1841, 57);
             this.tableLayoutPanel1.TabIndex = 34;
             // 
             // timerMarcaje2PuntosA
@@ -1296,12 +1396,172 @@
             // 
             this.helpProvider1.HelpNamespace = "";
             // 
+            // lbl_R1_amonestaciones_rojo
+            // 
+            this.lbl_R1_amonestaciones_rojo.AutoSize = true;
+            this.lbl_R1_amonestaciones_rojo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_R1_amonestaciones_rojo.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_R1_amonestaciones_rojo.ForeColor = System.Drawing.Color.Red;
+            this.lbl_R1_amonestaciones_rojo.Location = new System.Drawing.Point(3, 170);
+            this.lbl_R1_amonestaciones_rojo.Name = "lbl_R1_amonestaciones_rojo";
+            this.lbl_R1_amonestaciones_rojo.Size = new System.Drawing.Size(175, 85);
+            this.lbl_R1_amonestaciones_rojo.TabIndex = 3;
+            this.lbl_R1_amonestaciones_rojo.Text = "0";
+            this.lbl_R1_amonestaciones_rojo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_R1_amonestaciones_azul
+            // 
+            this.lbl_R1_amonestaciones_azul.AutoSize = true;
+            this.lbl_R1_amonestaciones_azul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_R1_amonestaciones_azul.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_R1_amonestaciones_azul.ForeColor = System.Drawing.Color.Red;
+            this.lbl_R1_amonestaciones_azul.Location = new System.Drawing.Point(184, 170);
+            this.lbl_R1_amonestaciones_azul.Name = "lbl_R1_amonestaciones_azul";
+            this.lbl_R1_amonestaciones_azul.Size = new System.Drawing.Size(175, 85);
+            this.lbl_R1_amonestaciones_azul.TabIndex = 4;
+            this.lbl_R1_amonestaciones_azul.Text = "0";
+            this.lbl_R1_amonestaciones_azul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_R2
+            // 
+            this.lbl_R2.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.lbl_R2, 2);
+            this.lbl_R2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_R2.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_R2.Location = new System.Drawing.Point(3, 255);
+            this.lbl_R2.Name = "lbl_R2";
+            this.lbl_R2.Size = new System.Drawing.Size(356, 85);
+            this.lbl_R2.TabIndex = 5;
+            this.lbl_R2.Text = "R2";
+            this.lbl_R2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_R2_puntos_rojo
+            // 
+            this.lbl_R2_puntos_rojo.AutoSize = true;
+            this.lbl_R2_puntos_rojo.BackColor = System.Drawing.Color.Red;
+            this.lbl_R2_puntos_rojo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_R2_puntos_rojo.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_R2_puntos_rojo.ForeColor = System.Drawing.Color.White;
+            this.lbl_R2_puntos_rojo.Location = new System.Drawing.Point(3, 340);
+            this.lbl_R2_puntos_rojo.Name = "lbl_R2_puntos_rojo";
+            this.lbl_R2_puntos_rojo.Size = new System.Drawing.Size(175, 85);
+            this.lbl_R2_puntos_rojo.TabIndex = 6;
+            this.lbl_R2_puntos_rojo.Text = "0";
+            this.lbl_R2_puntos_rojo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_R2_puntos_azul
+            // 
+            this.lbl_R2_puntos_azul.AutoSize = true;
+            this.lbl_R2_puntos_azul.BackColor = System.Drawing.Color.Blue;
+            this.lbl_R2_puntos_azul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_R2_puntos_azul.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_R2_puntos_azul.ForeColor = System.Drawing.Color.White;
+            this.lbl_R2_puntos_azul.Location = new System.Drawing.Point(184, 340);
+            this.lbl_R2_puntos_azul.Name = "lbl_R2_puntos_azul";
+            this.lbl_R2_puntos_azul.Size = new System.Drawing.Size(175, 85);
+            this.lbl_R2_puntos_azul.TabIndex = 7;
+            this.lbl_R2_puntos_azul.Text = "0";
+            this.lbl_R2_puntos_azul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_R2_amonestaciones_rojo
+            // 
+            this.lbl_R2_amonestaciones_rojo.AutoSize = true;
+            this.lbl_R2_amonestaciones_rojo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_R2_amonestaciones_rojo.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_R2_amonestaciones_rojo.ForeColor = System.Drawing.Color.Red;
+            this.lbl_R2_amonestaciones_rojo.Location = new System.Drawing.Point(3, 425);
+            this.lbl_R2_amonestaciones_rojo.Name = "lbl_R2_amonestaciones_rojo";
+            this.lbl_R2_amonestaciones_rojo.Size = new System.Drawing.Size(175, 85);
+            this.lbl_R2_amonestaciones_rojo.TabIndex = 8;
+            this.lbl_R2_amonestaciones_rojo.Text = "0";
+            this.lbl_R2_amonestaciones_rojo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_R2_amonestaciones_azul
+            // 
+            this.lbl_R2_amonestaciones_azul.AutoSize = true;
+            this.lbl_R2_amonestaciones_azul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_R2_amonestaciones_azul.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_R2_amonestaciones_azul.ForeColor = System.Drawing.Color.Red;
+            this.lbl_R2_amonestaciones_azul.Location = new System.Drawing.Point(184, 425);
+            this.lbl_R2_amonestaciones_azul.Name = "lbl_R2_amonestaciones_azul";
+            this.lbl_R2_amonestaciones_azul.Size = new System.Drawing.Size(175, 85);
+            this.lbl_R2_amonestaciones_azul.TabIndex = 9;
+            this.lbl_R2_amonestaciones_azul.Text = "0";
+            this.lbl_R2_amonestaciones_azul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_R3
+            // 
+            this.lbl_R3.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.lbl_R3, 2);
+            this.lbl_R3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_R3.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_R3.Location = new System.Drawing.Point(3, 510);
+            this.lbl_R3.Name = "lbl_R3";
+            this.lbl_R3.Size = new System.Drawing.Size(356, 85);
+            this.lbl_R3.TabIndex = 10;
+            this.lbl_R3.Text = "R3";
+            this.lbl_R3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_R3_puntos_rojo
+            // 
+            this.lbl_R3_puntos_rojo.AutoSize = true;
+            this.lbl_R3_puntos_rojo.BackColor = System.Drawing.Color.Red;
+            this.lbl_R3_puntos_rojo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_R3_puntos_rojo.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_R3_puntos_rojo.ForeColor = System.Drawing.Color.White;
+            this.lbl_R3_puntos_rojo.Location = new System.Drawing.Point(3, 595);
+            this.lbl_R3_puntos_rojo.Name = "lbl_R3_puntos_rojo";
+            this.lbl_R3_puntos_rojo.Size = new System.Drawing.Size(175, 85);
+            this.lbl_R3_puntos_rojo.TabIndex = 11;
+            this.lbl_R3_puntos_rojo.Text = "0";
+            this.lbl_R3_puntos_rojo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_R3_puntos_azul
+            // 
+            this.lbl_R3_puntos_azul.AutoSize = true;
+            this.lbl_R3_puntos_azul.BackColor = System.Drawing.Color.Blue;
+            this.lbl_R3_puntos_azul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_R3_puntos_azul.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_R3_puntos_azul.ForeColor = System.Drawing.Color.White;
+            this.lbl_R3_puntos_azul.Location = new System.Drawing.Point(184, 595);
+            this.lbl_R3_puntos_azul.Name = "lbl_R3_puntos_azul";
+            this.lbl_R3_puntos_azul.Size = new System.Drawing.Size(175, 85);
+            this.lbl_R3_puntos_azul.TabIndex = 12;
+            this.lbl_R3_puntos_azul.Text = "0";
+            this.lbl_R3_puntos_azul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_R3_amonestaciones_rojo
+            // 
+            this.lbl_R3_amonestaciones_rojo.AutoSize = true;
+            this.lbl_R3_amonestaciones_rojo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_R3_amonestaciones_rojo.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_R3_amonestaciones_rojo.ForeColor = System.Drawing.Color.Red;
+            this.lbl_R3_amonestaciones_rojo.Location = new System.Drawing.Point(3, 680);
+            this.lbl_R3_amonestaciones_rojo.Name = "lbl_R3_amonestaciones_rojo";
+            this.lbl_R3_amonestaciones_rojo.Size = new System.Drawing.Size(175, 85);
+            this.lbl_R3_amonestaciones_rojo.TabIndex = 13;
+            this.lbl_R3_amonestaciones_rojo.Text = "0";
+            this.lbl_R3_amonestaciones_rojo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_r3_amonestaciones_azul
+            // 
+            this.lbl_r3_amonestaciones_azul.AutoSize = true;
+            this.lbl_r3_amonestaciones_azul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_r3_amonestaciones_azul.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_r3_amonestaciones_azul.ForeColor = System.Drawing.Color.Red;
+            this.lbl_r3_amonestaciones_azul.Location = new System.Drawing.Point(184, 680);
+            this.lbl_r3_amonestaciones_azul.Name = "lbl_r3_amonestaciones_azul";
+            this.lbl_r3_amonestaciones_azul.Size = new System.Drawing.Size(175, 85);
+            this.lbl_r3_amonestaciones_azul.TabIndex = 14;
+            this.lbl_r3_amonestaciones_azul.Text = "0";
+            this.lbl_r3_amonestaciones_azul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Tablero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1662, 732);
+            this.ClientSize = new System.Drawing.Size(1841, 1061);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tablePrincipal);
             this.HelpButton = true;
@@ -1348,6 +1608,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picDosPuntoR_j2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTresPuntoR_j2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCuatroPuntoR_j2)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botonSalir)).EndInit();
@@ -1501,5 +1763,21 @@
         private System.Windows.Forms.PictureBox picDosPuntoA_j2;
         private System.Windows.Forms.PictureBox picTresPuntoA_j2;
         private System.Windows.Forms.PictureBox picCuatroPuntoA_j2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label lbl_R1;
+        private System.Windows.Forms.Label lbl_R1_puntos_rojo;
+        private System.Windows.Forms.Label lbl_R1_puntos_azul;
+        private System.Windows.Forms.Label lbl_R1_amonestaciones_rojo;
+        private System.Windows.Forms.Label lbl_R1_amonestaciones_azul;
+        private System.Windows.Forms.Label lbl_R2;
+        private System.Windows.Forms.Label lbl_R2_puntos_rojo;
+        private System.Windows.Forms.Label lbl_R2_puntos_azul;
+        private System.Windows.Forms.Label lbl_R2_amonestaciones_rojo;
+        private System.Windows.Forms.Label lbl_R2_amonestaciones_azul;
+        private System.Windows.Forms.Label lbl_R3;
+        private System.Windows.Forms.Label lbl_R3_puntos_rojo;
+        private System.Windows.Forms.Label lbl_R3_puntos_azul;
+        private System.Windows.Forms.Label lbl_R3_amonestaciones_rojo;
+        private System.Windows.Forms.Label lbl_r3_amonestaciones_azul;
     }
 }
