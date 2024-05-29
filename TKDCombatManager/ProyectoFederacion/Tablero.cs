@@ -43,6 +43,9 @@ namespace ProyectoFederacion
             //crear el arreglo de picturebox
             nuevoCombate();
 
+            if (formatoTradicional == false)
+                this.Text = "Combate - Formato El Mejor de 3";
+
             for (int i = 0; i < subsistemaPuntos.amonestaciones; i++)
             {
                 tamanioStandar = gamRojo[i].Size;
@@ -88,8 +91,6 @@ namespace ProyectoFederacion
             picDosPuntosR_j3.Visible    = false;
             picTresPuntosR_j3.Visible   = false;
             pic4PuntosR_j3.Visible      = false;
-
-            lbl_formato.Visible = false;
 
             int size = Hardware.cantidadDispositivos;
             if (size >= 0)

@@ -36,6 +36,7 @@
             this.flayoutAmonestacionesAzul = new System.Windows.Forms.FlowLayoutPanel();
             this.flow_j3_rojo = new System.Windows.Forms.FlowLayoutPanel();
             this.picUnPuntoR_j3 = new System.Windows.Forms.PictureBox();
+            this.picDosPuntosR_j3 = new System.Windows.Forms.PictureBox();
             this.picTresPuntosR_j3 = new System.Windows.Forms.PictureBox();
             this.pic4PuntosR_j3 = new System.Windows.Forms.PictureBox();
             this.flow_j3_azul = new System.Windows.Forms.FlowLayoutPanel();
@@ -47,9 +48,25 @@
             this.flayoutAmonestacionesRojo = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTiempo = new System.Windows.Forms.Label();
             this.flow_j1_azul = new System.Windows.Forms.FlowLayoutPanel();
+            this.picUnPuntoA_j1 = new System.Windows.Forms.PictureBox();
+            this.picDosPuntoA_j1 = new System.Windows.Forms.PictureBox();
+            this.picTresPuntoA_j1 = new System.Windows.Forms.PictureBox();
+            this.picCuatroPuntoA_j1 = new System.Windows.Forms.PictureBox();
             this.flow_j2_azul = new System.Windows.Forms.FlowLayoutPanel();
+            this.picUnPuntoA_j2 = new System.Windows.Forms.PictureBox();
+            this.picDosPuntoA_j2 = new System.Windows.Forms.PictureBox();
+            this.picTresPuntoA_j2 = new System.Windows.Forms.PictureBox();
+            this.picCuatroPuntoA_j2 = new System.Windows.Forms.PictureBox();
             this.flow_j1_rojo = new System.Windows.Forms.FlowLayoutPanel();
+            this.picUnPuntoR_j1 = new System.Windows.Forms.PictureBox();
+            this.picDosPuntoR_j1 = new System.Windows.Forms.PictureBox();
+            this.picTresPuntoR_j1 = new System.Windows.Forms.PictureBox();
+            this.picCuatroPuntoR_j1 = new System.Windows.Forms.PictureBox();
             this.flow_j2_rojo = new System.Windows.Forms.FlowLayoutPanel();
+            this.picUnPuntoR_j2 = new System.Windows.Forms.PictureBox();
+            this.picDosPuntoR_j2 = new System.Windows.Forms.PictureBox();
+            this.picTresPuntoR_j2 = new System.Windows.Forms.PictureBox();
+            this.picCuatroPuntoR_j2 = new System.Windows.Forms.PictureBox();
             this.lblRound = new System.Windows.Forms.Label();
             this.lblAzul = new System.Windows.Forms.Label();
             this.lblRojo = new System.Windows.Forms.Label();
@@ -105,7 +122,6 @@
             this.muestra3pA = new System.Windows.Forms.PictureBox();
             this.muestra4pA = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lbl_formato = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.timerMarcaje2PuntosA = new System.Windows.Forms.Timer(this.components);
             this.timerMarcaje2PuntosR = new System.Windows.Forms.Timer(this.components);
@@ -114,27 +130,11 @@
             this.timerMarcaje4PuntosA = new System.Windows.Forms.Timer(this.components);
             this.timerMarcaje4PuntosR = new System.Windows.Forms.Timer(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.picUnPuntoR_j1 = new System.Windows.Forms.PictureBox();
-            this.picDosPuntosR_j3 = new System.Windows.Forms.PictureBox();
-            this.picDosPuntoR_j1 = new System.Windows.Forms.PictureBox();
-            this.picTresPuntoR_j1 = new System.Windows.Forms.PictureBox();
-            this.picCuatroPuntoR_j1 = new System.Windows.Forms.PictureBox();
-            this.picUnPuntoR_j2 = new System.Windows.Forms.PictureBox();
-            this.picDosPuntoR_j2 = new System.Windows.Forms.PictureBox();
-            this.picTresPuntoR_j2 = new System.Windows.Forms.PictureBox();
-            this.picCuatroPuntoR_j2 = new System.Windows.Forms.PictureBox();
-            this.picUnPuntoA_j1 = new System.Windows.Forms.PictureBox();
-            this.picDosPuntoA_j1 = new System.Windows.Forms.PictureBox();
-            this.picTresPuntoA_j1 = new System.Windows.Forms.PictureBox();
-            this.picCuatroPuntoA_j1 = new System.Windows.Forms.PictureBox();
-            this.picUnPuntoA_j2 = new System.Windows.Forms.PictureBox();
-            this.picDosPuntoA_j2 = new System.Windows.Forms.PictureBox();
-            this.picTresPuntoA_j2 = new System.Windows.Forms.PictureBox();
-            this.picCuatroPuntoA_j2 = new System.Windows.Forms.PictureBox();
             this.tablePrincipal.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.flow_j3_rojo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUnPuntoR_j3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntosR_j3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTresPuntosR_j3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic4PuntosR_j3)).BeginInit();
             this.flow_j3_azul.SuspendLayout();
@@ -143,9 +143,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.picTresPuntosA_j3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic4PuntosA_j3)).BeginInit();
             this.flow_j1_azul.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUnPuntoA_j1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntoA_j1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTresPuntoA_j1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCuatroPuntoA_j1)).BeginInit();
             this.flow_j2_azul.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUnPuntoA_j2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntoA_j2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTresPuntoA_j2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCuatroPuntoA_j2)).BeginInit();
             this.flow_j1_rojo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUnPuntoR_j1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntoR_j1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTresPuntoR_j1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCuatroPuntoR_j1)).BeginInit();
             this.flow_j2_rojo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUnPuntoR_j2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntoR_j2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTresPuntoR_j2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCuatroPuntoR_j2)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botonSalir)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -190,25 +206,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.muestra2pA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.muestra3pA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.muestra4pA)).BeginInit();
-            this.flowLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picUnPuntoR_j1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntosR_j3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntoR_j1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTresPuntoR_j1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCuatroPuntoR_j1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picUnPuntoR_j2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntoR_j2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTresPuntoR_j2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCuatroPuntoR_j2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picUnPuntoA_j1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntoA_j1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTresPuntoA_j1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCuatroPuntoA_j1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picUnPuntoA_j2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntoA_j2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTresPuntoA_j2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCuatroPuntoA_j2)).BeginInit();
             this.SuspendLayout();
             // 
             // tablePrincipal
@@ -236,7 +234,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.72416F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.03255F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.2433F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 145F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
             this.tableLayoutPanel3.Controls.Add(this.lblNombreAzul, 3, 3);
             this.tableLayoutPanel3.Controls.Add(this.flayoutAmonestacionesAzul, 3, 4);
             this.tableLayoutPanel3.Controls.Add(this.flow_j3_rojo, 0, 2);
@@ -311,6 +309,16 @@
             this.picUnPuntoR_j3.TabIndex = 0;
             this.picUnPuntoR_j3.TabStop = false;
             // 
+            // picDosPuntosR_j3
+            // 
+            this.picDosPuntosR_j3.Image = global::ProyectoFederacion.Properties.Resources._2projo;
+            this.picDosPuntosR_j3.Location = new System.Drawing.Point(32, 3);
+            this.picDosPuntosR_j3.Name = "picDosPuntosR_j3";
+            this.picDosPuntosR_j3.Size = new System.Drawing.Size(23, 23);
+            this.picDosPuntosR_j3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDosPuntosR_j3.TabIndex = 1;
+            this.picDosPuntosR_j3.TabStop = false;
+            // 
             // picTresPuntosR_j3
             // 
             this.picTresPuntosR_j3.Image = global::ProyectoFederacion.Properties.Resources._3projo;
@@ -339,9 +347,9 @@
             this.flow_j3_azul.Controls.Add(this.pic4PuntosA_j3);
             this.flow_j3_azul.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flow_j3_azul.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flow_j3_azul.Location = new System.Drawing.Point(1513, 73);
+            this.flow_j3_azul.Location = new System.Drawing.Point(1512, 73);
             this.flow_j3_azul.Name = "flow_j3_azul";
-            this.flow_j3_azul.Size = new System.Drawing.Size(140, 29);
+            this.flow_j3_azul.Size = new System.Drawing.Size(141, 29);
             this.flow_j3_azul.TabIndex = 9;
             // 
             // picUnPuntoA_j3
@@ -431,10 +439,50 @@
             this.flow_j1_azul.Controls.Add(this.picDosPuntoA_j1);
             this.flow_j1_azul.Controls.Add(this.picTresPuntoA_j1);
             this.flow_j1_azul.Controls.Add(this.picCuatroPuntoA_j1);
-            this.flow_j1_azul.Location = new System.Drawing.Point(1513, 3);
+            this.flow_j1_azul.Location = new System.Drawing.Point(1512, 3);
             this.flow_j1_azul.Name = "flow_j1_azul";
             this.flow_j1_azul.Size = new System.Drawing.Size(139, 29);
             this.flow_j1_azul.TabIndex = 11;
+            // 
+            // picUnPuntoA_j1
+            // 
+            this.picUnPuntoA_j1.Image = global::ProyectoFederacion.Properties.Resources._1pazul;
+            this.picUnPuntoA_j1.Location = new System.Drawing.Point(3, 3);
+            this.picUnPuntoA_j1.Name = "picUnPuntoA_j1";
+            this.picUnPuntoA_j1.Size = new System.Drawing.Size(23, 23);
+            this.picUnPuntoA_j1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUnPuntoA_j1.TabIndex = 2;
+            this.picUnPuntoA_j1.TabStop = false;
+            // 
+            // picDosPuntoA_j1
+            // 
+            this.picDosPuntoA_j1.Image = global::ProyectoFederacion.Properties.Resources._2pazul;
+            this.picDosPuntoA_j1.Location = new System.Drawing.Point(32, 3);
+            this.picDosPuntoA_j1.Name = "picDosPuntoA_j1";
+            this.picDosPuntoA_j1.Size = new System.Drawing.Size(23, 23);
+            this.picDosPuntoA_j1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDosPuntoA_j1.TabIndex = 3;
+            this.picDosPuntoA_j1.TabStop = false;
+            // 
+            // picTresPuntoA_j1
+            // 
+            this.picTresPuntoA_j1.Image = global::ProyectoFederacion.Properties.Resources._3pazul;
+            this.picTresPuntoA_j1.Location = new System.Drawing.Point(61, 3);
+            this.picTresPuntoA_j1.Name = "picTresPuntoA_j1";
+            this.picTresPuntoA_j1.Size = new System.Drawing.Size(23, 23);
+            this.picTresPuntoA_j1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picTresPuntoA_j1.TabIndex = 4;
+            this.picTresPuntoA_j1.TabStop = false;
+            // 
+            // picCuatroPuntoA_j1
+            // 
+            this.picCuatroPuntoA_j1.Image = global::ProyectoFederacion.Properties.Resources._4pazul;
+            this.picCuatroPuntoA_j1.Location = new System.Drawing.Point(90, 3);
+            this.picCuatroPuntoA_j1.Name = "picCuatroPuntoA_j1";
+            this.picCuatroPuntoA_j1.Size = new System.Drawing.Size(23, 23);
+            this.picCuatroPuntoA_j1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCuatroPuntoA_j1.TabIndex = 5;
+            this.picCuatroPuntoA_j1.TabStop = false;
             // 
             // flow_j2_azul
             // 
@@ -442,10 +490,50 @@
             this.flow_j2_azul.Controls.Add(this.picDosPuntoA_j2);
             this.flow_j2_azul.Controls.Add(this.picTresPuntoA_j2);
             this.flow_j2_azul.Controls.Add(this.picCuatroPuntoA_j2);
-            this.flow_j2_azul.Location = new System.Drawing.Point(1513, 38);
+            this.flow_j2_azul.Location = new System.Drawing.Point(1512, 38);
             this.flow_j2_azul.Name = "flow_j2_azul";
             this.flow_j2_azul.Size = new System.Drawing.Size(139, 29);
             this.flow_j2_azul.TabIndex = 12;
+            // 
+            // picUnPuntoA_j2
+            // 
+            this.picUnPuntoA_j2.Image = global::ProyectoFederacion.Properties.Resources._1pazul;
+            this.picUnPuntoA_j2.Location = new System.Drawing.Point(3, 3);
+            this.picUnPuntoA_j2.Name = "picUnPuntoA_j2";
+            this.picUnPuntoA_j2.Size = new System.Drawing.Size(23, 23);
+            this.picUnPuntoA_j2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUnPuntoA_j2.TabIndex = 2;
+            this.picUnPuntoA_j2.TabStop = false;
+            // 
+            // picDosPuntoA_j2
+            // 
+            this.picDosPuntoA_j2.Image = global::ProyectoFederacion.Properties.Resources._2pazul;
+            this.picDosPuntoA_j2.Location = new System.Drawing.Point(32, 3);
+            this.picDosPuntoA_j2.Name = "picDosPuntoA_j2";
+            this.picDosPuntoA_j2.Size = new System.Drawing.Size(23, 23);
+            this.picDosPuntoA_j2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDosPuntoA_j2.TabIndex = 3;
+            this.picDosPuntoA_j2.TabStop = false;
+            // 
+            // picTresPuntoA_j2
+            // 
+            this.picTresPuntoA_j2.Image = global::ProyectoFederacion.Properties.Resources._3pazul;
+            this.picTresPuntoA_j2.Location = new System.Drawing.Point(61, 3);
+            this.picTresPuntoA_j2.Name = "picTresPuntoA_j2";
+            this.picTresPuntoA_j2.Size = new System.Drawing.Size(23, 23);
+            this.picTresPuntoA_j2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picTresPuntoA_j2.TabIndex = 4;
+            this.picTresPuntoA_j2.TabStop = false;
+            // 
+            // picCuatroPuntoA_j2
+            // 
+            this.picCuatroPuntoA_j2.Image = global::ProyectoFederacion.Properties.Resources._4pazul;
+            this.picCuatroPuntoA_j2.Location = new System.Drawing.Point(90, 3);
+            this.picCuatroPuntoA_j2.Name = "picCuatroPuntoA_j2";
+            this.picCuatroPuntoA_j2.Size = new System.Drawing.Size(23, 23);
+            this.picCuatroPuntoA_j2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCuatroPuntoA_j2.TabIndex = 5;
+            this.picCuatroPuntoA_j2.TabStop = false;
             // 
             // flow_j1_rojo
             // 
@@ -458,6 +546,46 @@
             this.flow_j1_rojo.Size = new System.Drawing.Size(138, 29);
             this.flow_j1_rojo.TabIndex = 13;
             // 
+            // picUnPuntoR_j1
+            // 
+            this.picUnPuntoR_j1.Image = global::ProyectoFederacion.Properties.Resources._1projo;
+            this.picUnPuntoR_j1.Location = new System.Drawing.Point(3, 3);
+            this.picUnPuntoR_j1.Name = "picUnPuntoR_j1";
+            this.picUnPuntoR_j1.Size = new System.Drawing.Size(23, 23);
+            this.picUnPuntoR_j1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUnPuntoR_j1.TabIndex = 1;
+            this.picUnPuntoR_j1.TabStop = false;
+            // 
+            // picDosPuntoR_j1
+            // 
+            this.picDosPuntoR_j1.Image = global::ProyectoFederacion.Properties.Resources._2projo;
+            this.picDosPuntoR_j1.Location = new System.Drawing.Point(32, 3);
+            this.picDosPuntoR_j1.Name = "picDosPuntoR_j1";
+            this.picDosPuntoR_j1.Size = new System.Drawing.Size(23, 23);
+            this.picDosPuntoR_j1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDosPuntoR_j1.TabIndex = 2;
+            this.picDosPuntoR_j1.TabStop = false;
+            // 
+            // picTresPuntoR_j1
+            // 
+            this.picTresPuntoR_j1.Image = global::ProyectoFederacion.Properties.Resources._3projo;
+            this.picTresPuntoR_j1.Location = new System.Drawing.Point(61, 3);
+            this.picTresPuntoR_j1.Name = "picTresPuntoR_j1";
+            this.picTresPuntoR_j1.Size = new System.Drawing.Size(23, 23);
+            this.picTresPuntoR_j1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picTresPuntoR_j1.TabIndex = 3;
+            this.picTresPuntoR_j1.TabStop = false;
+            // 
+            // picCuatroPuntoR_j1
+            // 
+            this.picCuatroPuntoR_j1.Image = global::ProyectoFederacion.Properties.Resources._4projo;
+            this.picCuatroPuntoR_j1.Location = new System.Drawing.Point(90, 3);
+            this.picCuatroPuntoR_j1.Name = "picCuatroPuntoR_j1";
+            this.picCuatroPuntoR_j1.Size = new System.Drawing.Size(23, 23);
+            this.picCuatroPuntoR_j1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCuatroPuntoR_j1.TabIndex = 4;
+            this.picCuatroPuntoR_j1.TabStop = false;
+            // 
             // flow_j2_rojo
             // 
             this.flow_j2_rojo.Controls.Add(this.picUnPuntoR_j2);
@@ -469,6 +597,46 @@
             this.flow_j2_rojo.Size = new System.Drawing.Size(138, 29);
             this.flow_j2_rojo.TabIndex = 14;
             // 
+            // picUnPuntoR_j2
+            // 
+            this.picUnPuntoR_j2.Image = global::ProyectoFederacion.Properties.Resources._1projo;
+            this.picUnPuntoR_j2.Location = new System.Drawing.Point(3, 3);
+            this.picUnPuntoR_j2.Name = "picUnPuntoR_j2";
+            this.picUnPuntoR_j2.Size = new System.Drawing.Size(23, 23);
+            this.picUnPuntoR_j2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUnPuntoR_j2.TabIndex = 1;
+            this.picUnPuntoR_j2.TabStop = false;
+            // 
+            // picDosPuntoR_j2
+            // 
+            this.picDosPuntoR_j2.Image = global::ProyectoFederacion.Properties.Resources._2projo;
+            this.picDosPuntoR_j2.Location = new System.Drawing.Point(32, 3);
+            this.picDosPuntoR_j2.Name = "picDosPuntoR_j2";
+            this.picDosPuntoR_j2.Size = new System.Drawing.Size(23, 23);
+            this.picDosPuntoR_j2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDosPuntoR_j2.TabIndex = 2;
+            this.picDosPuntoR_j2.TabStop = false;
+            // 
+            // picTresPuntoR_j2
+            // 
+            this.picTresPuntoR_j2.Image = global::ProyectoFederacion.Properties.Resources._3projo;
+            this.picTresPuntoR_j2.Location = new System.Drawing.Point(61, 3);
+            this.picTresPuntoR_j2.Name = "picTresPuntoR_j2";
+            this.picTresPuntoR_j2.Size = new System.Drawing.Size(23, 23);
+            this.picTresPuntoR_j2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picTresPuntoR_j2.TabIndex = 3;
+            this.picTresPuntoR_j2.TabStop = false;
+            // 
+            // picCuatroPuntoR_j2
+            // 
+            this.picCuatroPuntoR_j2.Image = global::ProyectoFederacion.Properties.Resources._4projo;
+            this.picCuatroPuntoR_j2.Location = new System.Drawing.Point(90, 3);
+            this.picCuatroPuntoR_j2.Name = "picCuatroPuntoR_j2";
+            this.picCuatroPuntoR_j2.Size = new System.Drawing.Size(23, 23);
+            this.picCuatroPuntoR_j2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCuatroPuntoR_j2.TabIndex = 4;
+            this.picCuatroPuntoR_j2.TabStop = false;
+            // 
             // lblRound
             // 
             this.lblRound.AutoSize = true;
@@ -478,7 +646,7 @@
             this.lblRound.Location = new System.Drawing.Point(147, 0);
             this.lblRound.Name = "lblRound";
             this.tableLayoutPanel3.SetRowSpan(this.lblRound, 2);
-            this.lblRound.Size = new System.Drawing.Size(1360, 70);
+            this.lblRound.Size = new System.Drawing.Size(1359, 70);
             this.lblRound.TabIndex = 10;
             this.lblRound.Text = "Round 1";
             this.lblRound.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1072,24 +1240,12 @@
             // flowLayoutPanel8
             // 
             this.flowLayoutPanel8.AutoSize = true;
-            this.flowLayoutPanel8.Controls.Add(this.lbl_formato);
             this.flowLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel8.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel8.Location = new System.Drawing.Point(959, 3);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(332, 48);
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(0, 48);
             this.flowLayoutPanel8.TabIndex = 49;
-            // 
-            // lbl_formato
-            // 
-            this.lbl_formato.AutoSize = true;
-            this.lbl_formato.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_formato.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_formato.Location = new System.Drawing.Point(3, 0);
-            this.lbl_formato.Name = "lbl_formato";
-            this.lbl_formato.Size = new System.Drawing.Size(326, 39);
-            this.lbl_formato.TabIndex = 0;
-            this.lbl_formato.Text = "Formato Tradicional";
             // 
             // tableLayoutPanel1
             // 
@@ -1140,176 +1296,6 @@
             // 
             this.helpProvider1.HelpNamespace = "";
             // 
-            // picUnPuntoR_j1
-            // 
-            this.picUnPuntoR_j1.Image = global::ProyectoFederacion.Properties.Resources._1projo;
-            this.picUnPuntoR_j1.Location = new System.Drawing.Point(3, 3);
-            this.picUnPuntoR_j1.Name = "picUnPuntoR_j1";
-            this.picUnPuntoR_j1.Size = new System.Drawing.Size(23, 23);
-            this.picUnPuntoR_j1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picUnPuntoR_j1.TabIndex = 1;
-            this.picUnPuntoR_j1.TabStop = false;
-            // 
-            // picDosPuntosR_j3
-            // 
-            this.picDosPuntosR_j3.Image = global::ProyectoFederacion.Properties.Resources._2projo;
-            this.picDosPuntosR_j3.Location = new System.Drawing.Point(32, 3);
-            this.picDosPuntosR_j3.Name = "picDosPuntosR_j3";
-            this.picDosPuntosR_j3.Size = new System.Drawing.Size(23, 23);
-            this.picDosPuntosR_j3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDosPuntosR_j3.TabIndex = 1;
-            this.picDosPuntosR_j3.TabStop = false;
-            // 
-            // picDosPuntoR_j1
-            // 
-            this.picDosPuntoR_j1.Image = global::ProyectoFederacion.Properties.Resources._2projo;
-            this.picDosPuntoR_j1.Location = new System.Drawing.Point(32, 3);
-            this.picDosPuntoR_j1.Name = "picDosPuntoR_j1";
-            this.picDosPuntoR_j1.Size = new System.Drawing.Size(23, 23);
-            this.picDosPuntoR_j1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDosPuntoR_j1.TabIndex = 2;
-            this.picDosPuntoR_j1.TabStop = false;
-            // 
-            // picTresPuntoR_j1
-            // 
-            this.picTresPuntoR_j1.Image = global::ProyectoFederacion.Properties.Resources._3projo;
-            this.picTresPuntoR_j1.Location = new System.Drawing.Point(61, 3);
-            this.picTresPuntoR_j1.Name = "picTresPuntoR_j1";
-            this.picTresPuntoR_j1.Size = new System.Drawing.Size(23, 23);
-            this.picTresPuntoR_j1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picTresPuntoR_j1.TabIndex = 3;
-            this.picTresPuntoR_j1.TabStop = false;
-            // 
-            // picCuatroPuntoR_j1
-            // 
-            this.picCuatroPuntoR_j1.Image = global::ProyectoFederacion.Properties.Resources._4projo;
-            this.picCuatroPuntoR_j1.Location = new System.Drawing.Point(90, 3);
-            this.picCuatroPuntoR_j1.Name = "picCuatroPuntoR_j1";
-            this.picCuatroPuntoR_j1.Size = new System.Drawing.Size(23, 23);
-            this.picCuatroPuntoR_j1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCuatroPuntoR_j1.TabIndex = 4;
-            this.picCuatroPuntoR_j1.TabStop = false;
-            // 
-            // picUnPuntoR_j2
-            // 
-            this.picUnPuntoR_j2.Image = global::ProyectoFederacion.Properties.Resources._1projo;
-            this.picUnPuntoR_j2.Location = new System.Drawing.Point(3, 3);
-            this.picUnPuntoR_j2.Name = "picUnPuntoR_j2";
-            this.picUnPuntoR_j2.Size = new System.Drawing.Size(23, 23);
-            this.picUnPuntoR_j2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picUnPuntoR_j2.TabIndex = 1;
-            this.picUnPuntoR_j2.TabStop = false;
-            // 
-            // picDosPuntoR_j2
-            // 
-            this.picDosPuntoR_j2.Image = global::ProyectoFederacion.Properties.Resources._2projo;
-            this.picDosPuntoR_j2.Location = new System.Drawing.Point(32, 3);
-            this.picDosPuntoR_j2.Name = "picDosPuntoR_j2";
-            this.picDosPuntoR_j2.Size = new System.Drawing.Size(23, 23);
-            this.picDosPuntoR_j2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDosPuntoR_j2.TabIndex = 2;
-            this.picDosPuntoR_j2.TabStop = false;
-            // 
-            // picTresPuntoR_j2
-            // 
-            this.picTresPuntoR_j2.Image = global::ProyectoFederacion.Properties.Resources._3projo;
-            this.picTresPuntoR_j2.Location = new System.Drawing.Point(61, 3);
-            this.picTresPuntoR_j2.Name = "picTresPuntoR_j2";
-            this.picTresPuntoR_j2.Size = new System.Drawing.Size(23, 23);
-            this.picTresPuntoR_j2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picTresPuntoR_j2.TabIndex = 3;
-            this.picTresPuntoR_j2.TabStop = false;
-            // 
-            // picCuatroPuntoR_j2
-            // 
-            this.picCuatroPuntoR_j2.Image = global::ProyectoFederacion.Properties.Resources._4projo;
-            this.picCuatroPuntoR_j2.Location = new System.Drawing.Point(90, 3);
-            this.picCuatroPuntoR_j2.Name = "picCuatroPuntoR_j2";
-            this.picCuatroPuntoR_j2.Size = new System.Drawing.Size(23, 23);
-            this.picCuatroPuntoR_j2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCuatroPuntoR_j2.TabIndex = 4;
-            this.picCuatroPuntoR_j2.TabStop = false;
-            // 
-            // picUnPuntoA_j1
-            // 
-            this.picUnPuntoA_j1.Image = global::ProyectoFederacion.Properties.Resources._1pazul;
-            this.picUnPuntoA_j1.Location = new System.Drawing.Point(3, 3);
-            this.picUnPuntoA_j1.Name = "picUnPuntoA_j1";
-            this.picUnPuntoA_j1.Size = new System.Drawing.Size(23, 23);
-            this.picUnPuntoA_j1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picUnPuntoA_j1.TabIndex = 2;
-            this.picUnPuntoA_j1.TabStop = false;
-            // 
-            // picDosPuntoA_j1
-            // 
-            this.picDosPuntoA_j1.Image = global::ProyectoFederacion.Properties.Resources._2pazul;
-            this.picDosPuntoA_j1.Location = new System.Drawing.Point(32, 3);
-            this.picDosPuntoA_j1.Name = "picDosPuntoA_j1";
-            this.picDosPuntoA_j1.Size = new System.Drawing.Size(23, 23);
-            this.picDosPuntoA_j1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDosPuntoA_j1.TabIndex = 3;
-            this.picDosPuntoA_j1.TabStop = false;
-            // 
-            // picTresPuntoA_j1
-            // 
-            this.picTresPuntoA_j1.Image = global::ProyectoFederacion.Properties.Resources._3pazul;
-            this.picTresPuntoA_j1.Location = new System.Drawing.Point(61, 3);
-            this.picTresPuntoA_j1.Name = "picTresPuntoA_j1";
-            this.picTresPuntoA_j1.Size = new System.Drawing.Size(23, 23);
-            this.picTresPuntoA_j1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picTresPuntoA_j1.TabIndex = 4;
-            this.picTresPuntoA_j1.TabStop = false;
-            // 
-            // picCuatroPuntoA_j1
-            // 
-            this.picCuatroPuntoA_j1.Image = global::ProyectoFederacion.Properties.Resources._4pazul;
-            this.picCuatroPuntoA_j1.Location = new System.Drawing.Point(90, 3);
-            this.picCuatroPuntoA_j1.Name = "picCuatroPuntoA_j1";
-            this.picCuatroPuntoA_j1.Size = new System.Drawing.Size(23, 23);
-            this.picCuatroPuntoA_j1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCuatroPuntoA_j1.TabIndex = 5;
-            this.picCuatroPuntoA_j1.TabStop = false;
-            // 
-            // picUnPuntoA_j2
-            // 
-            this.picUnPuntoA_j2.Image = global::ProyectoFederacion.Properties.Resources._1pazul;
-            this.picUnPuntoA_j2.Location = new System.Drawing.Point(3, 3);
-            this.picUnPuntoA_j2.Name = "picUnPuntoA_j2";
-            this.picUnPuntoA_j2.Size = new System.Drawing.Size(23, 23);
-            this.picUnPuntoA_j2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picUnPuntoA_j2.TabIndex = 2;
-            this.picUnPuntoA_j2.TabStop = false;
-            // 
-            // picDosPuntoA_j2
-            // 
-            this.picDosPuntoA_j2.Image = global::ProyectoFederacion.Properties.Resources._2pazul;
-            this.picDosPuntoA_j2.Location = new System.Drawing.Point(32, 3);
-            this.picDosPuntoA_j2.Name = "picDosPuntoA_j2";
-            this.picDosPuntoA_j2.Size = new System.Drawing.Size(23, 23);
-            this.picDosPuntoA_j2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDosPuntoA_j2.TabIndex = 3;
-            this.picDosPuntoA_j2.TabStop = false;
-            // 
-            // picTresPuntoA_j2
-            // 
-            this.picTresPuntoA_j2.Image = global::ProyectoFederacion.Properties.Resources._3pazul;
-            this.picTresPuntoA_j2.Location = new System.Drawing.Point(61, 3);
-            this.picTresPuntoA_j2.Name = "picTresPuntoA_j2";
-            this.picTresPuntoA_j2.Size = new System.Drawing.Size(23, 23);
-            this.picTresPuntoA_j2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picTresPuntoA_j2.TabIndex = 4;
-            this.picTresPuntoA_j2.TabStop = false;
-            // 
-            // picCuatroPuntoA_j2
-            // 
-            this.picCuatroPuntoA_j2.Image = global::ProyectoFederacion.Properties.Resources._4pazul;
-            this.picCuatroPuntoA_j2.Location = new System.Drawing.Point(90, 3);
-            this.picCuatroPuntoA_j2.Name = "picCuatroPuntoA_j2";
-            this.picCuatroPuntoA_j2.Size = new System.Drawing.Size(23, 23);
-            this.picCuatroPuntoA_j2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCuatroPuntoA_j2.TabIndex = 5;
-            this.picCuatroPuntoA_j2.TabStop = false;
-            // 
             // Tablero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1324,7 +1310,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Tablero";
             this.helpProvider1.SetShowHelp(this, true);
-            this.Text = "Combate";
+            this.Text = "Combate - Formato Tradicional";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Tablero_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Tablero_KeyUp);
@@ -1334,6 +1320,7 @@
             this.tableLayoutPanel3.PerformLayout();
             this.flow_j3_rojo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picUnPuntoR_j3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntosR_j3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTresPuntosR_j3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic4PuntosR_j3)).EndInit();
             this.flow_j3_azul.ResumeLayout(false);
@@ -1342,9 +1329,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.picTresPuntosA_j3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic4PuntosA_j3)).EndInit();
             this.flow_j1_azul.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picUnPuntoA_j1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntoA_j1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTresPuntoA_j1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCuatroPuntoA_j1)).EndInit();
             this.flow_j2_azul.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picUnPuntoA_j2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntoA_j2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTresPuntoA_j2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCuatroPuntoA_j2)).EndInit();
             this.flow_j1_rojo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picUnPuntoR_j1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntoR_j1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTresPuntoR_j1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCuatroPuntoR_j1)).EndInit();
             this.flow_j2_rojo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picUnPuntoR_j2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntoR_j2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTresPuntoR_j2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCuatroPuntoR_j2)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botonSalir)).EndInit();
@@ -1391,26 +1394,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.muestra2pA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.muestra3pA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.muestra4pA)).EndInit();
-            this.flowLayoutPanel8.ResumeLayout(false);
-            this.flowLayoutPanel8.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picUnPuntoR_j1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntosR_j3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntoR_j1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTresPuntoR_j1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCuatroPuntoR_j1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picUnPuntoR_j2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntoR_j2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTresPuntoR_j2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCuatroPuntoR_j2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picUnPuntoA_j1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntoA_j1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTresPuntoA_j1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCuatroPuntoA_j1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picUnPuntoA_j2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDosPuntoA_j2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTresPuntoA_j2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCuatroPuntoA_j2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1496,7 +1480,6 @@
         private System.Windows.Forms.Timer timerMarcaje4PuntosR;
         private System.Windows.Forms.HelpProvider helpProvider1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
-        private System.Windows.Forms.Label lbl_formato;
         private System.Windows.Forms.FlowLayoutPanel flow_j1_azul;
         private System.Windows.Forms.FlowLayoutPanel flow_j2_azul;
         private System.Windows.Forms.FlowLayoutPanel flow_j1_rojo;
