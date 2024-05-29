@@ -736,6 +736,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(362, 811);
             this.tableLayoutPanel2.TabIndex = 7;
+            this.tableLayoutPanel2.Visible = false;
             // 
             // lbl_R1
             // 
@@ -753,10 +754,10 @@
             // lbl_R1_puntos_rojo
             // 
             this.lbl_R1_puntos_rojo.AutoSize = true;
-            this.lbl_R1_puntos_rojo.BackColor = System.Drawing.Color.Red;
+            this.lbl_R1_puntos_rojo.BackColor = System.Drawing.Color.White;
             this.lbl_R1_puntos_rojo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_R1_puntos_rojo.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_R1_puntos_rojo.ForeColor = System.Drawing.Color.White;
+            this.lbl_R1_puntos_rojo.ForeColor = System.Drawing.Color.Red;
             this.lbl_R1_puntos_rojo.Location = new System.Drawing.Point(3, 85);
             this.lbl_R1_puntos_rojo.Name = "lbl_R1_puntos_rojo";
             this.lbl_R1_puntos_rojo.Size = new System.Drawing.Size(175, 85);
@@ -767,10 +768,10 @@
             // lbl_R1_puntos_azul
             // 
             this.lbl_R1_puntos_azul.AutoSize = true;
-            this.lbl_R1_puntos_azul.BackColor = System.Drawing.Color.Blue;
+            this.lbl_R1_puntos_azul.BackColor = System.Drawing.Color.White;
             this.lbl_R1_puntos_azul.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_R1_puntos_azul.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_R1_puntos_azul.ForeColor = System.Drawing.Color.White;
+            this.lbl_R1_puntos_azul.ForeColor = System.Drawing.Color.Blue;
             this.lbl_R1_puntos_azul.Location = new System.Drawing.Point(184, 85);
             this.lbl_R1_puntos_azul.Name = "lbl_R1_puntos_azul";
             this.lbl_R1_puntos_azul.Size = new System.Drawing.Size(175, 85);
@@ -1401,7 +1402,7 @@
             this.lbl_R1_amonestaciones_rojo.AutoSize = true;
             this.lbl_R1_amonestaciones_rojo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_R1_amonestaciones_rojo.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_R1_amonestaciones_rojo.ForeColor = System.Drawing.Color.Red;
+            this.lbl_R1_amonestaciones_rojo.ForeColor = System.Drawing.Color.Black;
             this.lbl_R1_amonestaciones_rojo.Location = new System.Drawing.Point(3, 170);
             this.lbl_R1_amonestaciones_rojo.Name = "lbl_R1_amonestaciones_rojo";
             this.lbl_R1_amonestaciones_rojo.Size = new System.Drawing.Size(175, 85);
@@ -1414,7 +1415,7 @@
             this.lbl_R1_amonestaciones_azul.AutoSize = true;
             this.lbl_R1_amonestaciones_azul.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_R1_amonestaciones_azul.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_R1_amonestaciones_azul.ForeColor = System.Drawing.Color.Red;
+            this.lbl_R1_amonestaciones_azul.ForeColor = System.Drawing.Color.Black;
             this.lbl_R1_amonestaciones_azul.Location = new System.Drawing.Point(184, 170);
             this.lbl_R1_amonestaciones_azul.Name = "lbl_R1_amonestaciones_azul";
             this.lbl_R1_amonestaciones_azul.Size = new System.Drawing.Size(175, 85);
@@ -1438,10 +1439,10 @@
             // lbl_R2_puntos_rojo
             // 
             this.lbl_R2_puntos_rojo.AutoSize = true;
-            this.lbl_R2_puntos_rojo.BackColor = System.Drawing.Color.Red;
+            this.lbl_R2_puntos_rojo.BackColor = System.Drawing.Color.White;
             this.lbl_R2_puntos_rojo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_R2_puntos_rojo.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_R2_puntos_rojo.ForeColor = System.Drawing.Color.White;
+            this.lbl_R2_puntos_rojo.ForeColor = System.Drawing.Color.Red;
             this.lbl_R2_puntos_rojo.Location = new System.Drawing.Point(3, 340);
             this.lbl_R2_puntos_rojo.Name = "lbl_R2_puntos_rojo";
             this.lbl_R2_puntos_rojo.Size = new System.Drawing.Size(175, 85);
@@ -1452,10 +1453,10 @@
             // lbl_R2_puntos_azul
             // 
             this.lbl_R2_puntos_azul.AutoSize = true;
-            this.lbl_R2_puntos_azul.BackColor = System.Drawing.Color.Blue;
+            this.lbl_R2_puntos_azul.BackColor = System.Drawing.Color.White;
             this.lbl_R2_puntos_azul.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_R2_puntos_azul.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_R2_puntos_azul.ForeColor = System.Drawing.Color.White;
+            this.lbl_R2_puntos_azul.ForeColor = System.Drawing.Color.Blue;
             this.lbl_R2_puntos_azul.Location = new System.Drawing.Point(184, 340);
             this.lbl_R2_puntos_azul.Name = "lbl_R2_puntos_azul";
             this.lbl_R2_puntos_azul.Size = new System.Drawing.Size(175, 85);
@@ -1468,7 +1469,7 @@
             this.lbl_R2_amonestaciones_rojo.AutoSize = true;
             this.lbl_R2_amonestaciones_rojo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_R2_amonestaciones_rojo.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_R2_amonestaciones_rojo.ForeColor = System.Drawing.Color.Red;
+            this.lbl_R2_amonestaciones_rojo.ForeColor = System.Drawing.Color.Black;
             this.lbl_R2_amonestaciones_rojo.Location = new System.Drawing.Point(3, 425);
             this.lbl_R2_amonestaciones_rojo.Name = "lbl_R2_amonestaciones_rojo";
             this.lbl_R2_amonestaciones_rojo.Size = new System.Drawing.Size(175, 85);
@@ -1481,7 +1482,7 @@
             this.lbl_R2_amonestaciones_azul.AutoSize = true;
             this.lbl_R2_amonestaciones_azul.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_R2_amonestaciones_azul.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_R2_amonestaciones_azul.ForeColor = System.Drawing.Color.Red;
+            this.lbl_R2_amonestaciones_azul.ForeColor = System.Drawing.Color.Black;
             this.lbl_R2_amonestaciones_azul.Location = new System.Drawing.Point(184, 425);
             this.lbl_R2_amonestaciones_azul.Name = "lbl_R2_amonestaciones_azul";
             this.lbl_R2_amonestaciones_azul.Size = new System.Drawing.Size(175, 85);
@@ -1505,10 +1506,10 @@
             // lbl_R3_puntos_rojo
             // 
             this.lbl_R3_puntos_rojo.AutoSize = true;
-            this.lbl_R3_puntos_rojo.BackColor = System.Drawing.Color.Red;
+            this.lbl_R3_puntos_rojo.BackColor = System.Drawing.Color.White;
             this.lbl_R3_puntos_rojo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_R3_puntos_rojo.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_R3_puntos_rojo.ForeColor = System.Drawing.Color.White;
+            this.lbl_R3_puntos_rojo.ForeColor = System.Drawing.Color.Red;
             this.lbl_R3_puntos_rojo.Location = new System.Drawing.Point(3, 595);
             this.lbl_R3_puntos_rojo.Name = "lbl_R3_puntos_rojo";
             this.lbl_R3_puntos_rojo.Size = new System.Drawing.Size(175, 85);
@@ -1519,10 +1520,10 @@
             // lbl_R3_puntos_azul
             // 
             this.lbl_R3_puntos_azul.AutoSize = true;
-            this.lbl_R3_puntos_azul.BackColor = System.Drawing.Color.Blue;
+            this.lbl_R3_puntos_azul.BackColor = System.Drawing.Color.White;
             this.lbl_R3_puntos_azul.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_R3_puntos_azul.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_R3_puntos_azul.ForeColor = System.Drawing.Color.White;
+            this.lbl_R3_puntos_azul.ForeColor = System.Drawing.Color.Blue;
             this.lbl_R3_puntos_azul.Location = new System.Drawing.Point(184, 595);
             this.lbl_R3_puntos_azul.Name = "lbl_R3_puntos_azul";
             this.lbl_R3_puntos_azul.Size = new System.Drawing.Size(175, 85);
@@ -1535,7 +1536,7 @@
             this.lbl_R3_amonestaciones_rojo.AutoSize = true;
             this.lbl_R3_amonestaciones_rojo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_R3_amonestaciones_rojo.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_R3_amonestaciones_rojo.ForeColor = System.Drawing.Color.Red;
+            this.lbl_R3_amonestaciones_rojo.ForeColor = System.Drawing.Color.Black;
             this.lbl_R3_amonestaciones_rojo.Location = new System.Drawing.Point(3, 680);
             this.lbl_R3_amonestaciones_rojo.Name = "lbl_R3_amonestaciones_rojo";
             this.lbl_R3_amonestaciones_rojo.Size = new System.Drawing.Size(175, 85);
@@ -1548,7 +1549,7 @@
             this.lbl_r3_amonestaciones_azul.AutoSize = true;
             this.lbl_r3_amonestaciones_azul.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_r3_amonestaciones_azul.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_r3_amonestaciones_azul.ForeColor = System.Drawing.Color.Red;
+            this.lbl_r3_amonestaciones_azul.ForeColor = System.Drawing.Color.Black;
             this.lbl_r3_amonestaciones_azul.Location = new System.Drawing.Point(184, 680);
             this.lbl_r3_amonestaciones_azul.Name = "lbl_r3_amonestaciones_azul";
             this.lbl_r3_amonestaciones_azul.Size = new System.Drawing.Size(175, 85);

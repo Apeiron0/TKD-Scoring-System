@@ -44,7 +44,10 @@ namespace ProyectoFederacion
             nuevoCombate();
 
             if (formatoTradicional == false)
+            {
+                tableLayoutPanel2.Visible = true;
                 this.Text = "Combate - Formato El Mejor de 3";
+            }
 
             for (int i = 0; i < subsistemaPuntos.amonestaciones; i++)
             {
