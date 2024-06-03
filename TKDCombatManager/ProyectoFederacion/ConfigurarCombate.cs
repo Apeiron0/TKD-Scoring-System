@@ -30,8 +30,7 @@ namespace ProyectoFederacion
             double tiempoEntreRounds = 0;
             int rounds = 3;
             int diferenciaPuntos = (int)spinDiferenciaMaxima.Value;
-            int amonestaciones = (int)spinAmonestaciones.Value;
-
+            int amonestaciones = (int)spinAmonestaciones.Value*2;
             bool formatoTradicional = true;
 
             string tMedico = txtTiempoMedico.Text;

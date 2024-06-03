@@ -636,6 +636,9 @@ namespace ProyectoFederacion
             contador3PuntosTimerRojo = 0;
             contador4PuntosTimerAzul = 0;
             contador4PuntosTimerRojo = 0;
+
+            lbl_amonestaciones_azul.Text = "0";
+            lbl_amonestaciones_rojo.Text = "0";
         }
 
         private void sumarPuntoRojo(int cantidad)
@@ -719,11 +722,14 @@ namespace ProyectoFederacion
         private void sumaKRojo()
         {
             //cambiar el color del icono de amonestacion mostrado en el tablero
-            gamRojo[subsistemaPuntos.numeroAmonestacionesRojo].BackgroundImage = picMuestra.BackgroundImage;
+           // gamRojo[subsistemaPuntos.numeroAmonestacionesRojo].BackgroundImage = picMuestra.BackgroundImage;
             //determinar si el competidor alcanzó el número máximo de amonestaciones
             bool amonestacionesAlcanzadas = subsistemaPuntos.marcarAmonestacionRojo();
             lblAzul.Text = subsistemaPuntos.puntosAzul;
             lblRojo.Text = subsistemaPuntos.puntosRojo;
+
+            lbl_amonestaciones_rojo.Text = ((Convert.ToInt32(subsistemaPuntos.amonestacionesRojo))/2).ToString();
+
             if ((subsistemaTiempo.muerteSubita == true) && (subsistemaPuntos.numeroPuntosAzul > 0)) //si está en muerte súbita y el oponente suma puntos por esa amonestación, terminar el combate
             {
                 subsistemaTiempo.terminarCombate();
@@ -757,7 +763,7 @@ namespace ProyectoFederacion
             if (subsistemaPuntos.numeroAmonestacionesRojo > 0)
             {
                 //cambiar el color del icono de amonestacion mostrado en el tablero
-                gamRojo[subsistemaPuntos.numeroAmonestacionesRojo - 1].BackgroundImage = picNoMarcada.BackgroundImage;
+                //gamRojo[subsistemaPuntos.numeroAmonestacionesRojo - 1].BackgroundImage = picNoMarcada.BackgroundImage;
                 //quitar la amonestacion
                 subsistemaPuntos.quitarAmonestacionRojo();
                 //si se le dio un punto al otro competidor, se le quita y se devuelve??
@@ -1136,12 +1142,17 @@ namespace ProyectoFederacion
 
         private void botonRestaKR_Click(object sender, EventArgs e)
         {
+            subsistemaPuntos.quitarPuntoAzul();
             restaKRojo();
+            restaKRojo();
+            lbl_amonestaciones_rojo.Text=((Convert.ToInt16(subsistemaPuntos.amonestacionesRojo))/2).ToString();
+            
         }
 
         private void botonSumaGR_Click(object sender, EventArgs e)
         {
             sumaGRojo();
+            //lbl_amonestaciones_rojo.Text = (Convert.ToInt16(subsistemaPuntos.amonestacionesRojo) / 2).ToString();
         }
 
         private void botonSumaKA_Click(object sender, EventArgs e)
@@ -1157,6 +1168,7 @@ namespace ProyectoFederacion
         private void botonSumaGA_Click(object sender, EventArgs e)
         {
             sumaGAzul();
+            lbl_amonestaciones_azul.Text=(Convert.ToInt16(subsistemaPuntos.amonestacionesAzul) / 2).ToString();
         }
 
         private void botonAtrasar_MouseDown(object sender, MouseEventArgs e)
