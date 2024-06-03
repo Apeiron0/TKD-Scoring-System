@@ -774,11 +774,14 @@ namespace ProyectoFederacion
         private void sumaKAzul()
         {
             //cambiar el color del icono de amonestacion mostrado en el tablero
-            gamAzul[subsistemaPuntos.numeroAmonestacionesAzul].BackgroundImage = picMuestra.BackgroundImage;
+            //gamAzul[subsistemaPuntos.numeroAmonestacionesAzul].BackgroundImage = picMuestra.BackgroundImage;
             //determinar si el competidor alcanzó el número máximo de amonestaciones
             bool amonestacionesMaximasAlcanzadas = subsistemaPuntos.marcarAmonestacionAzul();
             lblAzul.Text = subsistemaPuntos.puntosAzul;
             lblRojo.Text = subsistemaPuntos.puntosRojo;
+
+            lbl_amonestaciones_azul.Text = ((Convert.ToInt32(subsistemaPuntos.amonestacionesAzul)) / 2).ToString();
+
             if ((subsistemaTiempo.muerteSubita == true) && (subsistemaPuntos.numeroPuntosRojo > 0)) //si está en muerte súbita y el oponente suma puntos por esa amonestación, terminar el combate
             {
                 subsistemaTiempo.terminarCombate();
@@ -1162,13 +1165,16 @@ namespace ProyectoFederacion
 
         private void botonRestaKA_Click(object sender, EventArgs e)
         {
+            subsistemaPuntos.quitarPuntoRojo();
             restaKAzul();
+            restaKAzul();
+            lbl_amonestaciones_azul.Text = ((Convert.ToInt16(subsistemaPuntos.amonestacionesAzul)) / 2).ToString();
         }
 
         private void botonSumaGA_Click(object sender, EventArgs e)
         {
             sumaGAzul();
-            lbl_amonestaciones_azul.Text=(Convert.ToInt16(subsistemaPuntos.amonestacionesAzul) / 2).ToString();
+            //lbl_amonestaciones_azul.Text=(Convert.ToInt16(subsistemaPuntos.amonestacionesAzul) / 2).ToString();
         }
 
         private void botonAtrasar_MouseDown(object sender, MouseEventArgs e)

@@ -1312,6 +1312,7 @@
             this.botonSumaKA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.botonSumaKA.TabIndex = 10;
             this.botonSumaKA.TabStop = false;
+            this.botonSumaKA.Visible = false;
             this.botonSumaKA.Click += new System.EventHandler(this.botonSumaKA_Click);
             // 
             // botonRestaKA
