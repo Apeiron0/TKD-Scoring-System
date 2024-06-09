@@ -52,6 +52,7 @@ namespace ProyectoFederacion
         public int numeroPuntosRojo
         {
             get { return puntosMarcadosRojo; }
+            set { this.puntosMarcadosRojo=value; }
         }
         public string puntosAzul
         {
@@ -60,14 +61,17 @@ namespace ProyectoFederacion
         public int numeroPuntosAzul
         {
             get { return puntosMarcadosAzul; }
+            set { this.puntosMarcadosAzul = value; }
         }
         public int numeroAmonestacionesRojo
         {
             get { return amonestacionesMarcadasRojo; }
+            set { this.amonestacionesMarcadasRojo=value; }
         }
         public int numeroAmonestacionesAzul
         {
             get { return amonestacionesMarcadasAzul; }
+            set { this.amonestacionesMarcadasAzul=value; }
         }
         public string amonestacionesRojo
         {
@@ -198,6 +202,19 @@ namespace ProyectoFederacion
                 this.colorGanador = Punteo.ROJO;
                 return;
             }
+        }
+
+        public void determinarGanador(string color)
+        {
+            if (color=="azul")
+            {
+                this.colorGanador = Punteo.AZUL;
+            }
+            if (color == "rojo")
+            {
+                this.colorGanador= Punteo.ROJO;
+            }
+
         }
 
         public void reset()
