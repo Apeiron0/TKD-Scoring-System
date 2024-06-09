@@ -30,6 +30,10 @@ namespace ProyectoFederacion
         private double contador4PuntosTimerAzul = 0;
         private Size tamanioStandar;
 
+        private bool formatoTradicional = true;
+        private int roundsGanadosAzul = 0;
+        private int roundsGanadosRojos = 0;
+
         public Tablero(Tiempo motorTiempo, Punteo motorPunteo, bool formatoTradicional)
         {
             InitializeComponent();
@@ -45,8 +49,10 @@ namespace ProyectoFederacion
 
             if (formatoTradicional == false)
             {
-                tableLayoutPanel2.Visible = true;
+                tableLayoutPanel6.Visible = true;
+                tableLayoutPanel7.Visible = true;
                 this.Text = "Combate - Formato El Mejor de 3";
+                this.formatoTradicional = formatoTradicional;
             }
 
             for (int i = 0; i < subsistemaPuntos.amonestaciones; i++)
@@ -173,6 +179,7 @@ namespace ProyectoFederacion
                                 else
                                 {
                                     //preguntar si se desea un round de desempate
+                                    //Aqui hiso ulitmo round del mejor de tres
                                     if (MessageBox.Show("¿Iniciar round de desempate?", "Empate", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
                                     {
                                         detenerClicSostenido(); //detener el timer del clic sostenido porque cuando se llega a cero, el evento mouseUp no funciona.
@@ -217,8 +224,22 @@ namespace ProyectoFederacion
                             {
                                 detenerClicSostenido(); //detener el timer del clic sostenido porque cuando se llega a cero, el evento mouseUp no funciona.
                                 //esperar la confirmación del usuario para iniciar el siguiente round
+                                if (formatoTradicional == false)
+                                {
+                                    subsistemaPuntos.numeroPuntosAzul = 0;
+                                    subsistemaPuntos.numeroAmonestacionesAzul = 0;
+
+                                    subsistemaPuntos.numeroPuntosRojo = 0;
+                                    subsistemaPuntos.numeroAmonestacionesRojo = 0;
+
+                                    lblAzul.Text = "0";
+                                    lbl_amonestaciones_azul.Text = "0";
+
+                                    lblRojo.Text = "0";
+                                    lbl_amonestaciones_rojo.Text = "0";
+                                }
                                 MessageBox.Show("Iniciar siguiente round", "Iniciar round", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                subsistemaTiempo.finalizarDescanso();
+                                subsistemaTiempo.finalizarDescanso();                                
                                 timerPrincipal.Enabled = subsistemaTiempo.iniciar();
                                 lblTiempo.Text = subsistemaTiempo.tiempo;
                                 lblRound.Text = subsistemaTiempo.round;
@@ -227,7 +248,76 @@ namespace ProyectoFederacion
                             {
                                 detenerClicSostenido(); //detener el timer del clic sostenido porque cuando se llega a cero, el evento mouseUp no funciona.
                                 //esperar la confirmación del usuario para iniciar el siguiente round
+                                //Aqui iso el primer descanso
+                                //hizo segundo descanso
+                                if (formatoTradicional == false)
+                                {
+                                    if (subsistemaPuntos.numeroPuntosAzul > subsistemaPuntos.numeroPuntosRojo)
+                                    {
+                                        roundsGanadosAzul++;
+                                    }
+                                    if (subsistemaPuntos.numeroPuntosRojo > subsistemaPuntos.numeroPuntosAzul)
+                                    {
+                                        roundsGanadosRojos++;
+                                    }
+                                    if (subsistemaPuntos.numeroPuntosAzul == subsistemaPuntos.numeroPuntosRojo)
+                                    {
+                                        if (subsistemaPuntos.numeroAmonestacionesAzul < subsistemaPuntos.numeroAmonestacionesRojo)
+                                        {
+                                            roundsGanadosAzul++;
+                                        }
+                                        if (subsistemaPuntos.numeroAmonestacionesAzul > subsistemaPuntos.numeroAmonestacionesRojo)
+                                        {
+                                            roundsGanadosRojos++;
+                                        }
+                                    }
+
+                                    switch (subsistemaTiempo.roundActual)
+                                    {
+                                        case 1:
+                                            lbl_R1_puntos_azul.Text = subsistemaPuntos.puntosAzul;
+                                            lbl_R1_amonestaciones_azul.Text = (subsistemaPuntos.numeroAmonestacionesAzul / 2).ToString();
+
+
+                                            lbl_R1_puntos_rojo.Text = subsistemaPuntos.puntosRojo;
+                                            lbl_R1_amonestaciones_rojo.Text = (subsistemaPuntos.numeroAmonestacionesRojo / 2).ToString();
+
+                                            break;
+
+                                        case 2:
+                                            lbl_R2_puntos_azul.Text = subsistemaPuntos.puntosAzul;
+                                            lbl_R2_amonestaciones_azul.Text = (subsistemaPuntos.numeroAmonestacionesAzul / 2).ToString();
+
+
+                                            lbl_R2_puntos_rojo.Text = subsistemaPuntos.puntosRojo;
+                                            lbl_R2_amonestaciones_rojo.Text = (subsistemaPuntos.numeroAmonestacionesRojo / 2).ToString();
+
+                                            break;
+
+                                        case 3:
+                                            lbl_R3_puntos_azul.Text = subsistemaPuntos.puntosAzul;
+                                            lbl_r3_amonestaciones_azul.Text = (subsistemaPuntos.numeroAmonestacionesAzul / 2).ToString();
+
+                                            lbl_R3_puntos_rojo.Text = subsistemaPuntos.puntosRojo;
+                                            lbl_R3_amonestaciones_rojo.Text = (subsistemaPuntos.numeroAmonestacionesRojo / 2).ToString();
+
+                                            break;
+                                    }
+
+
+                                    if (roundsGanadosAzul==2)
+                                    {
+                                        //determinarGanador("azul");
+                                        ganadorAzul();
+                                    }
+                                    if (roundsGanadosRojos==2)
+                                    {
+                                        //determinarGanador("rojo");
+                                        ganadorRojo();
+                                    }
+                                }
                                 MessageBox.Show("Iniciar descanso", "Iniciar descanso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                
                                 subsistemaTiempo.iniciarDescanso();
                                 timerPrincipal.Enabled = true;
                                 lblTiempo.Text = subsistemaTiempo.tiempo;
@@ -303,7 +393,26 @@ namespace ProyectoFederacion
             //lblTiempo.Text = "Ganador " + color;
             
         }
-      
+
+        private void determinarGanador(string Color)
+        {
+            subsistemaPuntos.determinarGanador(Color);
+            string color = "";
+            if (subsistemaPuntos.ganador == Punteo.AZUL)
+            {
+                color = "Azul";
+                lblNombreAzul.Text = "Ganador " + lblNombreAzul.Text;
+            }
+            else
+            {
+                color = "Rojo";
+                lblNombreRojo.Text = "Ganador " + lblNombreRojo.Text;
+            }
+            timerBlink.Enabled = true;
+            MessageBox.Show(this, "El ganador es el competidor " + color, "Combate finalizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+
         private void Tablero_KeyDown(object sender, KeyEventArgs e)
         {
             int codigo = e.KeyValue;
@@ -639,6 +748,24 @@ namespace ProyectoFederacion
 
             lbl_amonestaciones_azul.Text = "0";
             lbl_amonestaciones_rojo.Text = "0";
+
+            lbl_R1_amonestaciones_azul.Text="0";
+            lbl_R1_amonestaciones_rojo.Text="0";
+            lbl_R1_puntos_azul.Text="0";
+            lbl_R1_puntos_rojo.Text="0";
+
+            lbl_R2_amonestaciones_azul.Text = "0";
+            lbl_R2_amonestaciones_rojo.Text = "0";
+            lbl_R2_puntos_azul.Text = "0";
+            lbl_R2_puntos_rojo.Text= "0";
+
+            lbl_r3_amonestaciones_azul.Text = "0";
+            lbl_R3_amonestaciones_rojo.Text = "0";
+            lbl_R3_puntos_azul.Text= "0";
+            lbl_R3_puntos_rojo.Text = "0";
+
+            roundsGanadosAzul = 0;
+            roundsGanadosRojos= 0;
         }
 
         private void sumarPuntoRojo(int cantidad)
