@@ -277,30 +277,28 @@ namespace ProyectoFederacion
                                         case 1:
                                             lbl_R1_puntos_azul.Text = subsistemaPuntos.puntosAzul;
                                             lbl_R1_amonestaciones_azul.Text = (subsistemaPuntos.numeroAmonestacionesAzul / 2).ToString();
-
-
+                                           
                                             lbl_R1_puntos_rojo.Text = subsistemaPuntos.puntosRojo;
                                             lbl_R1_amonestaciones_rojo.Text = (subsistemaPuntos.numeroAmonestacionesRojo / 2).ToString();
-
+                                           
                                             break;
 
                                         case 2:
                                             lbl_R2_puntos_azul.Text = subsistemaPuntos.puntosAzul;
                                             lbl_R2_amonestaciones_azul.Text = (subsistemaPuntos.numeroAmonestacionesAzul / 2).ToString();
-
-
+                                            
                                             lbl_R2_puntos_rojo.Text = subsistemaPuntos.puntosRojo;
                                             lbl_R2_amonestaciones_rojo.Text = (subsistemaPuntos.numeroAmonestacionesRojo / 2).ToString();
-
+                                            
                                             break;
 
                                         case 3:
                                             lbl_R3_puntos_azul.Text = subsistemaPuntos.puntosAzul;
                                             lbl_r3_amonestaciones_azul.Text = (subsistemaPuntos.numeroAmonestacionesAzul / 2).ToString();
-
+                                            
                                             lbl_R3_puntos_rojo.Text = subsistemaPuntos.puntosRojo;
                                             lbl_R3_amonestaciones_rojo.Text = (subsistemaPuntos.numeroAmonestacionesRojo / 2).ToString();
-
+                                           
                                             break;
                                     }
 
@@ -878,9 +876,22 @@ namespace ProyectoFederacion
             {
                 if ((amonestacionesAlcanzadas) || (subsistemaPuntos.marcarPuntoAzul(0) == true)) //if (amonestacionesAlcanzadas)
                 {
-                    //si se llegó al máximo de amonestaciones gana el otro competidor
-                    detenerCombate(false);
-                    //determinarGanador();
+                    if (formatoTradicional==true)
+                    {
+                        //si se llegó al máximo de amonestaciones gana el otro competidor
+                        detenerCombate(false);
+                        //determinarGanador();
+
+                    }
+                    else
+                    {
+                        //subsistemaTiempo.quitarTiempo();
+                        subsistemaTiempo.actual = 0;
+
+                        
+
+                    }
+
                 }
             }
         }
@@ -931,9 +942,21 @@ namespace ProyectoFederacion
             {
                 if ((amonestacionesMaximasAlcanzadas)||(subsistemaPuntos.marcarPuntoRojo(0)==true))
                 {
-                    //si se llegó al máximo de amonestaciones gana el otro competidor
-                    detenerCombate(false);
-                    //determinarGanador();
+                    if (formatoTradicional == true)
+                    {
+                        //si se llegó al máximo de amonestaciones gana el otro competidor
+                        detenerCombate(false);
+                        //determinarGanador();
+
+                    }
+                    else
+                    {
+                        //subsistemaTiempo.quitarTiempo();
+                        subsistemaTiempo.actual = 0;
+
+
+
+                    }
                 }
             }
         }

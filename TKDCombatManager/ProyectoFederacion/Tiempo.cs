@@ -58,6 +58,7 @@ namespace ProyectoFederacion
         public double actual
         {
             get { return this.tiempoActual; }
+            set { this.tiempoActual = value;}
         }
         public double tiempoRound
         {
